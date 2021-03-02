@@ -1,3 +1,3 @@
 # BOYO-QUIZ
-Education 
+#Education 
 What if we could mixe everything?
