@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="https://boyoquiz.com/sitemap.xml">
+	<url>
+		<loc>"https://boyoquiz.com/index.html</loc>
+		
+	</url>
+	<url>
+		<loc>"https://boyoquiz.com/about.html</loc>
+		
+	</url>
+
+    <url>
+		<loc>"https://boyoquiz.com/music.html</loc>
+		
+	</url>
+
+    <url>
+		<loc>"https://boyoquiz.com/his.html</loc>
+		
+	</url>
+
+    <url>
+		<loc>"https://boyoquiz.com/geo.html</loc>
+		
+	</url>
+
+    <url>
+		<loc>"https://boyoquiz.com/act.html</loc>
+		
+	</url>
+
+    <url>
+		<loc>"https://boyoquiz.com/foc.html</loc>
+		
+	</url>
+</urlset>
