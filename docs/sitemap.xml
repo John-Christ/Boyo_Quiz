@@ -1,69 +1,35 @@
-<?xml version="1.0" encoding="UTF-8"?
-   
-        <ul>
-            <li><a href="index.html">Page d'Accueil</a></li>
-            <li><a href="about.html">A Propos</a></li>
-            <li><a href="music.html">Musique</a></li>
-            <img id=logo src="https://ia601404.us.archive.org/1/items/whats-app-image-2021-02-27-at-13.08.16/WhatsApp%20Image%202021-02-27%20at%2013.08.16.jpeg">              
-          </ul>   
-           
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="https://boyoquiz.com/sitemap.xml">
+	<url>
+		<link>"https://boyoquiz.com/index.html</link>
+		
+	</url>
+	<url>
+		<link>"https://boyoquiz.com/about.html</link>
+		
+	</url>
 
-          <a href=his.html>
-            <div id=bloc1>
+    <url>
+		<link>"https://boyoquiz.com/music.html</link>
+		
+	</url>
 
-          <img id=z src="z.gif">
-           <text>Histoire</text>
-           
-           <text >Teste tes connaissances<br>
-          en Histoire et recois les felicitations<br>
-        du vieux Nzengue.</text>
-           </a>   
-           
+    <url>
+		<link>"https://boyoquiz.com/his.html</link>
+		
+	</url>
 
-            
-            <a href=geo.html>
-              <img id=z src="a.gif">
-           <text>Geographie<text>
-           
-           <text >Teste tes connaissances<br>
-          en Geographie et recois les felicitations<br>
-        du President.</text>
-          </a>
-          
-           
-           <a href=act.html>
-            <img id=z src="a.gif">
-           <text>Actualite</text>
-         
-           <text>Teste tes connaissances<br>
-          sur l'Actualite et recois les felicitations<br>
-        du President.</text>
-          </a>
-          
+    <url>
+		<link>"https://boyoquiz.com/geo.html</link>
+		
+	</url>
 
+    <url>
+		<link>"https://boyoquiz.com/act.html</link>
+		
+	</url>
 
- 
-            <a href=foc.html>
-            <img id=z src="z.gif">
-           <text>Focalisateur de chances</text>
-           
-           <text>D'apres un ancien savant chinois,<br> 
-              harmonisr l'esprit tous les matins<br>
-             avec peu d'elements du hasard<br> 
-            aide a praparer une journee de succes. </text>
-            <text>essayez <b>!!!</b></text>
-            </a>
-          
-
-
-
-
-
- 
-                                  
-                              
- 
-  
-    <text> © Boyo 2021</text>
- 
-
+    <url>
+		<link>"https://boyoquiz.com/foc.html</link>
+		
+	</url>
