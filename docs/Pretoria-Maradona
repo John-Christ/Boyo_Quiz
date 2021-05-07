@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang= "fr-FR">
+
+
+    <head>
+
+                
+
+        <meta content="text/html"; charset = utf-8" http-equiv = "Content-Type">
+        <meta name="author" content="John Christ Bouma"> 
+        <link rel= "icon" href="https://ia601404.us.archive.org/1/items/whats-app-image-2021-02-27-at-13.08.16/WhatsApp%20Image%202021-02-27%20at%2013.08.16.jpeg" size="192x192">
+        <title>Template Efera</title>
+
+       
+    <style>
+      #txt1 {
+        background-color:gold;
+        width: 70%;
+        height:250px;
+      }
+      #r1{
+        background-color:gold;
+        width: 97%;
+        height:450px;
+      }
+      #img {
+        width: 90%;
+        height:400px;
+        
+      }
+
+     #r2 {
+       display:inline-block;
+       width: 90%;
+       height:"#";
+       background-color: gold;
+       }
+       #r3 {
+       display: block;
+       width: 90%;
+       height:100px;
+       background-color: gold;
+       }
+    </style>
+       <body>
+         <br>
+         <center>
+          <div>
+            <h1 id=txt1>Business Owners want to boost their activities by organising<br>
+            small or large events to attract new costumers.<br>
+          Boyo Lifestyle has created Pretoria Maradona,<br>
+        local Artists togehter as a band.<br>
+        Pretoria Maradona aims for collaboration between young artists and companies.</h1>
+          </div>
+          <br>
+         <div id=r1>
+         <img id=img src=https://ia601505.us.archive.org/1/items/preto_202105/PRETO.png>
+        </div>
+        <br>
+        <div>
+          <h1></h1>
+        </div>
+        <br>
+        <div id=r2>
+          <br>
+       
+            <h1>We are proud to present some of our artists (Pretoria Maradona).
+              <br><br>
+              Pretoria Maradona has actually recorded "STOCKO"<br>
+               as the collective song.
+            </h1>
+            <br>
+              <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1044544945&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/user-757208096" title="Johnny Brozer" target="_blank" style="color: #cccccc; text-decoration: none;">Johnny Brozer</a> · <a href="https://soundcloud.com/user-757208096/stocko" title="Stocko" target="_blank" style="color: #cccccc; text-decoration: none;">Stocko</a></div>
+             
+             
+          <br>
+          <iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2F100810088463512%2Fvideos%2F403684860638288%2F&show_text=false&width=560" width="560" height="314" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/kXEo3R9u-cY?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>     
+        <br>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/3euUPvmf9iA?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>  
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/1dUlU5Qbyd0?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+       <br><br><br>
+      
+      <div id=r3>
+        <br>
+        <p>Contact us and register as Business Owner or an Artist.
+        <br>
+        Email: jcb403@hotmail.com<br>
+        Phone: 06 11 51 46 59.
+        </p>
+      
+    </div>
+       </center>
+       </body>
