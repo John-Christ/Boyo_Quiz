@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <div id="container"></div>
+<script async
+  src="https://pay.google.com/gp/p/js/pay.js"
+  onload="onGooglePayLoaded()">
+
+
+
+const getGooglePaymentsClient = new google.payments.api.PaymentsClient ({
+
+});
+
+googlePayClient 
+      .isReadyToPay(googlePayBaseConfiguration);
+      then(response => {
+          if (response.result){
+              createAndAddGooglePayButton();
+          }
+      });
+
+function onGooglePayButtonClicked() {
+    // Resquest payment data
+    googlePayClient
+    .loadPaymentData(buildPaymentDataRequest())
+     then(paymentData => {
+         //Submit order with data
+         fetch(
+             '/api/orders',
+          buildOrdeersRequest(
+              order,
+              paymentData.paymentMethodData.tokenizationData,
+              payment.shippingAdreess,
+          )
+         );
+     });
+}
+
+ 
+
+</script>
+</body>
+
+
+</html>
