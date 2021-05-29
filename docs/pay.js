@@ -1,6 +1,7 @@
- <script>  
+  
 
 /**
+   /**
  * Define the version of the Google Pay API referenced when creating your
  * configuration
  *
@@ -38,15 +39,10 @@ const allowedCardAuthMethods = ["PAN_ONLY", "CRYPTOGRAM_3DS"];
  * @see {@link https://developers.google.com/pay/api/web/reference/request-objects#gateway|PaymentMethodTokenizationSpecification}
  */
 
-const cardPaymentMethod = Object.assign(
-  {},
-  baseCardPaymentMethod,
-  {
-    tokenizationSpecification: tokenizationSpecification
-  }
-);
-
-
+const tokenizationSpecification = {
+  type: 'DIRECT_INTEGRATION'
+  
+};
 
 
 /**
@@ -69,6 +65,14 @@ const baseCardPaymentMethod = {
  *
  * @see {@link https://developers.google.com/pay/api/web/reference/request-objects#CardParameters|CardParameters}
  */
+
+const cardPaymentMethod = Object.assign(
+  {},
+  baseCardPaymentMethod,
+  {
+    tokenizationSpecification: tokenizationSpecification
+  }
+);
 
 
 /**
@@ -276,6 +280,4 @@ function processPayment(paymentData) {
     }, 500);
   });
 }
-
- 
 
