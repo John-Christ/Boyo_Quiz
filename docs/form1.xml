@@ -5,8 +5,8 @@ Content-Length: nnnn
 
 <?xml version = "1.0"?>
 <SOAP-ENV:Envelope 
-   xmlns:SOAP-ENV = "http://boyoquiz.com/form.html" 
-   SOAP-ENV:encodingStyle = " http://boyoquiz.com/form.html/soap-encoding">
+ xmlns:soap="http://boyoquiz.com/2003/05/soap-envelope/"
+soap:encodingStyle="http://boyoquiz.com/2003/05/soap-encoding">
   
   
    <SOAP-ENV:Header/>
@@ -22,10 +22,6 @@ Content-Length: nnnn
         
 	    
         
-                <Redirect>
-                    <NotifyUrl>http://localhost</NotifyUrl>
-                    <ReturnUrl>http://localhost</ReturnUrl>
-                </Redirect>
                 
              
 	
