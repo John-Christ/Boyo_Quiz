@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 var xhr = new XMLHttpRequest;
-xhr.open('GET', '/server');
+xhr.open('GET', 'form.html');
 
 // If specified, responseType must be empty string or "document"
 xhr.responseType = 'document';
