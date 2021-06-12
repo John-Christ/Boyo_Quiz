@@ -1,20 +1,33 @@
-<?xml version="1.0" encoding="UTF-8"?>
+POST /OrderEntry HTTP/1.1
+Host: www.tutorialspoint.com
+Content-Type: application/soap;  charset="utf-8"
+Content-Length: nnnn
 
-var xhr = new XMLHttpRequest;
-xhr.open('GET', 'form.html');
-
-// If specified, responseType must be empty string or "document"
-xhr.responseType = 'document';
-
-// Force the response to be parsed as XML
-xhr.overrideMimeType('text/xml');
-
-xhr.onload = function () {
-  if (xhr.readyState === xhr.DONE && xhr.status === 200) {
-    console.log(xhr.response, xhr.responseXML);
-  }
-};
-
-xhr.send();
+<?xml version = "1.0"?>
+<SOAP-ENV:Envelope 
+   xmlns:SOAP-ENV = "http://boyoquiz.com/form.html" 
+   SOAP-ENV:encodingStyle = " http://boyoquiz.com/form.html/soap-encoding">
   
-</xml>
+  
+   <SOAP-ENV:Header/>
+    <SOAP-ENV:Body>
+    	<Form xmlns="http://boyoquiz.com/form.html">
+        
+        <nom id="a"> </nom>
+        
+        <address id="b"> </address>
+        
+        <message id="c"> </message>
+        
+        
+	    
+        
+                <Redirect>
+                    <NotifyUrl>http://localhost</NotifyUrl>
+                    <ReturnUrl>http://localhost</ReturnUrl>
+                </Redirect>
+                
+             
+	
+	</SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
