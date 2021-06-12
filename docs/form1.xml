@@ -1,5 +1,5 @@
-POST /OrderEntry HTTP/1.1
-Host: www.tutorialspoint.com
+POST/OrderEntry HTTP/1.1
+Host: http://github.com
 Content-Type: application/soap;  charset="utf-8"
 Content-Length: nnnn
 
