@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
-    <head>
+    
+   
 
         
 
-
+<head>
     <!--$wcmPlaceholder("Home Page")--> 
         <link rel="canonical" href="http://boyoquiz.com/john Bouma.html">
 
@@ -15,27 +16,27 @@
 </head>
 <body>
 
-<form action= "mailto:johnchrist@gmail.com?subject=myform_submission" 
-enctype="text/plain" onsubmit="location.href='#';" >
-
-    <p>
-        <label id='a' for='name'>Enter your name: </label>
- <input type="text" name="name">
-</p>
-
-<p>
-    <label id='b' for='email'>Enter your email: </label>
-<input type="text" name="email">
-</p>
-
-
-<p>
-    <label id='c' for='message'>Enter your message: </label>
-<input type="text" name="message">
-</p>
- 
-    <input type="submit" value="Submit">
+<form name="gform" id="gform" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLSeUiN_zxIc33VYF3sAcuslO2kAv5kqg_nwydASp72eaorwjgg/formResponse?" target="hidden_iframe" onsubmit="submitted=true;">
+  First name:<br>
+  <input type="text" name="entry.1149391433" id="entry.1149391433"><br>
+  Last name:<br>
+  <input type="text" name="entry.1002371373" id="entry.1002371373">
+  <input type="submit" value="Submit">
 </form>
+
+<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
+                                                                                               
+<script src="assets/js/jquery.min.js"></script>
+<script type="text/javascript">var submitted=false;</script>
+<script type="text/javascript">
+$('#gform').on('submit', function(e) {
+  $('#gform *').fadeOut(2000);
+  $('#gform').prepend('Your submission has been processed. Thanks...');
+  });
+</script>
+                                                                                               
+                                                                                               
+
 </body>
                                                
                                        
