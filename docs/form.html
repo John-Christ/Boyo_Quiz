@@ -1,11 +1,8 @@
 <!DOCTYPE html>
 <html>
-    
-   
+    <head>
 
-        
 
-<head>
     <!--$wcmPlaceholder("Home Page")--> 
         <link rel="canonical" href="http://boyoquiz.com/john Bouma.html">
 
@@ -13,36 +10,25 @@
         <meta name="author" content="John Christ Bouma"> 
         <link rel= "icon" href="https://ia601404.us.archive.org/1/items/whats-app-image-2021-02-27-at-13.08.16/WhatsApp%20Image%202021-02-27%20at%2013.08.16.jpeg" size="192x192">
         <title>John Bouma</title>
-        
-        <script src="assets/js/jquery.min.js"></script>
-<script type="text/javascript">var submitted=true;</script>
-<script type="text/javascript">
-$('#gform').on('submit', function(e) {
-  $('#gform *').fadeOut(2000);
-  $('#gform').prepend('Your submission has been processed...');
-  });
-</script>
-        
+        <script>
+            function myFunction() {
+              location.replace("https://boyoquiz.com")
+            }
+            </script>
 </head>
 <body>
+    <form name="gform" id="gform" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLSeUiN_zxIc33VYF3sAcuslO2kAv5kqg_nwydASp72eaorwjgg/formResponse?" target="hidden_iframe" onsubmit="submitted=true;">
+        First name:<br>
+        <input type="text" name="entry.1149391433" id="entry.1149391433"><br>
+        Last name:<br>
+        <input type="text" name="entry.1002371373" id="entry.1002371373">
+         
+                                                                   
+        <input type="submit" value="Submit"onclick="myFunction()">
+                                        
+      </form>
+      <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
 
-<form name="gform" id="gform" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLSeUiN_zxIc33VYF3sAcuslO2kAv5kqg_nwydASp72eaorwjgg/formResponse?" target="hidden_iframe" onsubmit="submitted=true;">
-  First name:<br>
-  <input type="text" name="entry.1149391433" id="entry.1149391433"><br>
-  Last name:<br>
-  <input type="text" name="entry.1002371373" id="entry.1002371373">
-   
-                                                             
-  <input type="submit" value="Submit">
-                                  
-</form>
-
-<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
-                                                                                               
-                                                                                     
-                                                                                               
-
+      
 </body>
-                                               
-                                       
- </html>
+</html>
