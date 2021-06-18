@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="tool.xsl"?>
+
+
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
+   
+ <SOAP-ENV:Body>
+    	<SinglePaymentRequest xmlns="http://www.paygate.co.za/PayHOST">
+			<CardPaymentRequest>
+				<Account>
+					<PayGateId>10011072130</PayGateId>
+					<Password>test</Password>
+				</Account>
+				<Customer>
+					<Title>Mr</Title>
+					<FirstName>Joe</FirstName>
+					<LastName>Soap</LastName>
+					<Telephone>0861234567</Telephone>
+					<Mobile>0735552233</Mobile>
+					<Email>joe@soap.com</Email>
+				</Customer>
+				<CardNumber>4000000000000002</CardNumber>
+				<CardExpiryDate>122020</CardExpiryDate>
+				<CVV>999</CVV>
+				<BudgetPeriod>0</BudgetPeriod>
+				<Redirect>
+					<NotifyUrl>https://www.mytestsite.com/notify</NotifyUrl>
+					<ReturnUrl>https://www.mytestsite.com/return</ReturnUrl>
+				</Redirect>
+				<Order>
+					<MerchantOrderId>INV101</MerchantOrderId>
+					<Currency>ZAR</Currency>
+					<Amount>100</Amount>
+				</Order>
+			</CardPaymentRequest>
+		</SinglePaymentRequest>
+	</SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
