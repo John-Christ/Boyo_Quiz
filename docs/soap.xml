@@ -2,7 +2,10 @@
 <?xml-stylesheet type="text/xsl" href="tool.xsl"?>
 
 
-<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
+curl --location --request POST 'https://secure.paygate.co.za/payhost/process.trans' \
+--header 'Content-Type: text/xml' \
+--header 'SOAPAction: SinglePayment' \
+--data-raw <SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
    
  <SOAP-ENV:Body>
     	<SinglePaymentRequest xmlns="http://www.paygate.co.za/PayHOST">
