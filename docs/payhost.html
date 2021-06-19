@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang= "en-EN">
+    <head>
+
+              <!--$wcmPlaceholder("Home Page")--> 
+        <link rel="canonical" href="http://boyoquiz.com/">
+
+        <meta content="text/html"; charset = utf-8" http-equiv = "Content-Type">
+        <meta name="author" content="John Christ Bouma"> 
+        <link rel= "icon" href="https://ia601404.us.archive.org/1/items/whats-app-image-2021-02-27-at-13.08.16/WhatsApp%20Image%202021-02-27%20at%2013.08.16.jpeg" size="192x192">
+        <title>BOYO QUIZ</title>
+
+<script>
+function loadXMLDoc() {
+  var xmlhttp = new XMLHttpRequest();
+  xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      myFunction(this);
+    }
+  };
+  xmlhttp.open();
+  xmlhttp.send("POST", "soap.xml", true);
+}
+function myFunction(xml) {
+  var i;
+  var xmlDoc = xml.responseXML;
+  var form="<tr><td>FirstName</td><td>LastName</td></tr>";
+    var x = xmlDoc.getElementsByTagName("field");
+
+  for (i = 0; i <x.length; i++) { 
+   form += "<tr><td>" +
+    x[i].getElementsByTagName("FirstName")[].childNodes[].nodeValue +
+    "</td><td>" +
+    x[i].getElementsByTagName("LastName")[].childNodes[].nodeValue +
+    "</td></tr>";
+  }
+  document.getElementById("demo").innerHTML = form;
+}
+</script>
+
+
+
+
+
+
+</head>
+
+
+
+<body>
+
+<form method="POST" src="soap.xml" id="demo" action="https://secure.paygate.co.za/payhost/process.trans">
+  
+  <label name="FirstName">
+    <input name="FirstName">
+    
+   <br><br>
+    
+    
+    <label name="LastName">
+    <input name="LastName">
+      <br><br>
+      
+      
+    <input type=submit value=submit>
+
+  </form>
+  
+  
+  
+
+
+
+
+</body>
+</html>
