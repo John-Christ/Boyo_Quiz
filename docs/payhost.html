@@ -29,10 +29,25 @@ function myFunction(xml) {
 
   for (i = 0; i <x.length; i++) { 
    form += "<tr><td>" +
+     x[i].getElementsByTagName("Title")[].childNodes[].nodeValue +
+    "</td></tr>"+                       
     x[i].getElementsByTagName("FirstName")[].childNodes[].nodeValue +
     "</td><td>" +
     x[i].getElementsByTagName("LastName")[].childNodes[].nodeValue +
+    "</td></tr>"+
+    x[i].getElementsByTagName("CardNumber")[].childNodes[].nodeValue +
+    "</td></tr>"+
+      x[i].getElementsByTagName("CardExpiryDate")[].childNodes[].nodeValue +
+    "</td></tr>"+
+     x[i].getElementsByTagName("CVV")[].childNodes[].nodeValue +
+    "</td></tr>"+
+     x[i].getElementsByTagName("Currency")[].childNodes[].nodeValue +
+    "</td></tr>"+
+     x[i].getElementsByTagName("Amount")[].childNodes[].nodeValue +
     "</td></tr>";
+                           
+                           
+                           
   }
   document.getElementById("demo").innerHTML = form;
 }
@@ -51,15 +66,42 @@ function myFunction(xml) {
 
 <form method="POST" src="soap.xml" id="demo" action="https://secure.paygate.co.za/payhost/process.trans">
   
-  <label name="FirstName">
+    
+    
+      <label>FirstName</label>
     <input name="FirstName">
     
    <br><br>
     
     
-    <label name="LastName">
+      <label>LastName</label>
     <input name="LastName">
       <br><br>
+    
+      <label>CardNumber</label>
+    <input name="CardNumber">
+      <br><br>
+    
+    
+      <label>CardExpiryDate</label>
+    <input name="CardExpiryDate">
+      <br><br>
+    
+    
+      <label>CVV</label>
+    <input name="CVV">
+      <br><br>
+    
+      <label>Currency</label>
+    <input name="Currency">
+      <br><br>
+    
+    
+      <label>Amount</label>
+    <input name="Amount">
+      <br><br>
+    
+   
       
       
     <input type=submit value=submit>
