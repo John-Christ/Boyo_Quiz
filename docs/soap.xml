@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="tool.xsl"?>
 
 
-curl --location --request POST 'https://secure.paygate.co.za/payhost/process.trans' \
---header 'Content-Type: text/xml' \
---header 'SOAPAction: SinglePayment' \
---data-raw <SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
    
  <SOAP-ENV:Body>
     	<SinglePaymentRequest xmlns="http://www.paygate.co.za/PayHOST">
@@ -15,16 +11,41 @@ curl --location --request POST 'https://secure.paygate.co.za/payhost/process.tra
 					<Password>test</Password>
 				</Account>
 				<Customer>
+					
+					
+					<field name="title">
 					<Title>Mr</Title>
+					<field>
+						
+					<field name="FirstName">
 					<FirstName>Joe</FirstName>
+					</field>
+						
+					
+				        <field name="LastName">
 					<LastName>Soap</LastName>
+					</field>
+						
 					<Telephone>0861234567</Telephone>
 					<Mobile>0735552233</Mobile>
 					<Email>joe@soap.com</Email>
 				</Customer>
+				
+				<field name="CardNumber">
 				<CardNumber>4000000000000002</CardNumber>
+				</field>
+						
+						
+				<field name="CardExpiryDate">
 				<CardExpiryDate>122020</CardExpiryDate>
+				</field>
+					
+						
+				<field name="CVV">		
 				<CVV>999</CVV>
+			        </field>
+						
+						
 				<BudgetPeriod>0</BudgetPeriod>
 				<Redirect>
 					<NotifyUrl>https://www.mytestsite.com/notify</NotifyUrl>
@@ -32,8 +53,14 @@ curl --location --request POST 'https://secure.paygate.co.za/payhost/process.tra
 				</Redirect>
 				<Order>
 					<MerchantOrderId>INV101</MerchantOrderId>
+					<field name="Currency">
 					<Currency>ZAR</Currency>
+					</field>
+					
+					
+					<field name="Amount">
 					<Amount>100</Amount>
+					</field>
 				</Order>
 			</CardPaymentRequest>
 		</SinglePaymentRequest>
