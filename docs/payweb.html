@@ -10,9 +10,71 @@
         <meta name="author" content="John Christ Bouma"> 
         <link rel= "icon" href="https://ia601404.us.archive.org/1/items/whats-app-image-2021-02-27-at-13.08.16/WhatsApp%20Image%202021-02-27%20at%2013.08.16.jpeg" size="192x192">
         <title>BOYO  QUIZ</title>
+        <script src="https://js.yoco.com/sdk/v1/yoco-sdk-web.js"></script>
+        
+        curl https://online.yoco.com/v1/charges/ \
+        -u sk_test_155047dc7LM2OJ925c843338515b: \
+        -d token=pk_test_6f9d6c34AVy62Mr0de34 \
+        -d amountInCents=2799 \
+        -d currency=ZAR
+                                                                
+
         </head>
         <body>
         
-       <h1>Thanks for your Transaction!</h1>
+       <h1>Take your Transaction!</h1>
+                                                                
+         <form id="payment-form" method="POST">
+  <div class="one-liner">
+    <div id="card-frame">
+      <!-- Yoco Inline form will be added here -->
+    </div>
+    <button id="pay-button">
+      PAY ZAR 24.99
+    </button>
+  </div>
+  <p class="success-payment-message" />
+</form> 
+                                    
+     
+                                    
+  <script>
+  // Replace the supplied `publicKey` with your own.
+  // Ensure that in production you use a production public_key.
+  var sdk = new window.YocoSDK({
+    publicKey: 'pk_test_6f9d6c34AVy62Mr0de34'
+  });
+
+  // Create a new dropin form instance
+  var inline = sdk.inline({
+    layout: 'field',
+    amountInCents: 2499,
+    currency: 'ZAR'
+  });
+  inline.mount('#card-frame');
+</script> 
+                                    
+   <script>
+  var form = document.getElementById('payment-form');
+  var submitButton = document.getElementById('pay-button');
+  form.addEventListener('submit', function (event) {
+    event.preventDefault()
+    submitButton.disabled = true;
+    inline.createToken().then(function (result) {
+      submitButton.disabled = false;
+      if (result.error) {
+        const errorMessage = result.error.message;
+        errorMessage && alert("error occured: " + errorMessage);
+      } else {
+        const token = result;
+        alert("card successfully tokenised: " + token.id);
+      }
+    }).catch(function (error) {
+      submitButton.disabled = false;
+      alert("error occured: " + error);
+    });
+  });
+</script>   
+                                    
         </body>
         </html>
