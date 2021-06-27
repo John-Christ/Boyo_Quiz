@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang= "en-EN">
+    <head>
+<script src="https://js.yoco.com/sdk/v1/yoco-sdk-web.js"></script>
+
+     
+
+
+
+</head>
+
+
+
+<body>
+
+<button id="checkout-button">Pay</button>
+
+<script>
+  var yoco = new window.YocoSDK({
+    publicKey: 'pk_test_6f9d6c34AVy62Mr0de34',
+  });
+  var checkoutButton = document.querySelector('#checkout-button');
+  checkoutButton.addEventListener('click', function () {
+    yoco.showPopup({
+      amountInCents: 2799,
+      currency: 'ZAR',
+      name: 'Boyo',
+      description: 'New in the Game',
+      callback: function (result) {
+        if (result.error) {
+          const errorMessage = result.error.message;
+          alert("error occured: " + errorMessage);
+        } else {
+          alert("card successfully tokenised: " + result.id);
+        }
+    
+      }
+    })
+  });
+</script>
+  
+  
+
+
+
+
+</body>
+</html>
