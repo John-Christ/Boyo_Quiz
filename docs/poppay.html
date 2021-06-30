@@ -17,14 +17,14 @@
 
 <script>
   var yoco = new window.YocoSDK({
-    publicKey: 'pk_test_6f9d6c34AVy62Mr0de34',
+    publicKey: 'pk_live_c441f26bAVy62Mr88a94',
   });
   var checkoutButton = document.querySelector('#checkout-button');
   checkoutButton.addEventListener('click', function () {
     yoco.showPopup({
-      amountInCents: 2799,
+      amountInCents: 100,
       currency: 'ZAR',
-      name: 'Boyo',
+      name: 'BoyoTest',
       description: 'New in the Game',
       callback: function (result) {
         if (result.error) {
