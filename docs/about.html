@@ -134,6 +134,13 @@
  }
 
 
+  #form {
+display: inline-block;
+width: 700px;
+height: 300px;
+
+}                                                                              
+                                                                              
 
  #footer {
 
@@ -170,7 +177,20 @@
 De l'histoire, Geographie, actualité et musique sont nos sujets.<br>
  C'est le raison pour laquelle cette application web a été crée.</h3>
 <h3>Ce site a ete cree par John Bouma, 2021.</h3>
-<h3>Contact email:<br>jcb403@hotmail.com</h3>
+<h3>Contact nous</h3>
+   <div id=form>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/formiojs@latest/dist/formio.full.min.css">
+  <script src="https://unpkg.com/formiojs@latest/dist/formio.full.min.js"></script>
+  <div id="formio"></div>
+  <script type="text/javascript">
+    window.onload = function() {
+      Formio.createForm(document.getElementById('formio'), 'https://pnrbtwgqnhdhboq.form.io/quiz');
+    };
+  </script>
+  </div>            
+               
+               
  <h4>Follow BoyoQuiz ✔</h4>
 <a href="https://www.facebook.com/boyoquiz">Facebook</a>
                
