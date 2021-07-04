@@ -172,13 +172,12 @@ gtag('config', 'G-RBDN0MJBJE');
 
 }
                                                                             
- #gform {
-    float: right;
-    display: block;
-    margin-right: 20px;
-    background-color: white;
+ #form {
+display: inline-block;
+width: 700px;
+height: 300px;
 
-}                                                                                   
+}                                                                                 
                                                                             
                                                                  
                                                                             
@@ -210,22 +209,7 @@ gtag('config', 'G-RBDN0MJBJE');
               Navigue et découvre des nouvelles choses.<br>
               Nous sommes heureux de vous avoir comme utilisateurs🎁✨😀</h5>
                                                          
-    <form name="gform" id="gform" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLSfUlnb2mVCcciSZFFKBJpNj9ccItMMHSnu09GR2zW-QTFgd3A/formResponse?" target="hidden_iframe" onsubmit="submitted=true;">
-      Contact-Nous: <br><br>
-       Name:<br>
-        <input type="text" name="entry.689570208" id="entry.689570208"><br><br>
-        Email:<br>
-        <input type="text" name="entry.934868626" id="entry.934868626" placeholder="me@example.com" required><br><br>
-         
-       Message:<br> 
-                     <input type="text" name="entry.1120692998" id="entry.1120692998" height="55px">
-                     <br><br>
-         
-                                                                   
-        <input type="submit" value="Submit"onclick="myFunction()">
-                                        
-      </form>
-      <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>                                     
+                            
                                                          
               <br>
               <br>
@@ -377,6 +361,20 @@ gtag('config', 'G-RBDN0MJBJE');
 
 
   </div id=bloc>
+                     <br>
+           <h5>Contacter Nous!<h5>
+                                 <br>
+           <div id=form>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/formiojs@latest/dist/formio.full.min.css">
+  <script src="https://unpkg.com/formiojs@latest/dist/formio.full.min.js"></script>
+  <div id="formio"></div>
+  <script type="text/javascript">
+    window.onload = function() {
+      Formio.createForm(document.getElementById('formio'), 'https://pnrbtwgqnhdhboq.form.io/quiz');
+    };
+  </script>
+  </div>                      
           </center>
  
   <br>
