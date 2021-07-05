@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang= "en-EN">
+    <head>
+<script src="https://js.yoco.com/sdk/v1/yoco-sdk-web.js"></script>
+
+     
+
+
+
+</head>
+
+
+
+<body>
+
+<button id="checkout-button">Pay</button>
+
+<script>
+  var yoco = new window.YocoSDK({
+    publicKey: 'pk_live_c441f26bAVy62Mr88a94',
+  });
+  var checkoutButton = document.querySelector('#checkout-button');
+  checkoutButton.addEventListener('click', function () {
+    yoco.showPopup({
+       firstName:'',
+        lastName:'',
+        email:'',
+      amountInCents: 1000,
+      currency: 'ZAR',
+      name: 'BoyoTest',
+      description: 'Test Pay',
+      callback: function (result) {
+        if (result.error) {
+          const errorMessage = result.error.message;
+          alert("error occured: " + errorMessage);
+        } else {
+          alert("card successfully tokenised: " + result.id);
+        }
+    
+      }
+    })
+  });
+</script>
+  
+  
+
+
+
+
+</body>
+</html>
