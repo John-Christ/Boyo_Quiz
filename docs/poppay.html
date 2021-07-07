@@ -26,15 +26,7 @@
       currency: 'ZAR',
       name: 'BoyoTest',
       description: 'New in the Game',
-      callback: function (result) {
-        if (result.error) {
-          const errorMessage = result.error.message;
-          alert("error occured: " + errorMessage);
-        } else {
-          alert("card successfully tokenised: " + result.id);
-        }
-    
-      }
+      
     })
   });
 </script>
