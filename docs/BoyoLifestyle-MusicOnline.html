@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang= "en-EN">
+    <head>
+
+              <!--$wcmPlaceholder("Home Page")--> 
+        <link rel="canonical" href="http://boyoquiz.com/BoyoLifestyle-MusicOnline">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="John Christ Bouma"> 
+        <link rel= "icon" href="https://ia803400.us.archive.org/34/items/2019-05-10-copy/2019-05-10%20-%20Copy.jpg" size="192x192">
+        <title>BOYO&#128189LIFESTYLE</title>
+
+        <style> 
+      
+            body {
+                background-color: white;
+        }
+
+       #menu {
+            display:block;
+            border: 1px solid black;
+            position: fixed; 
+            top: 0;
+          width: 100%;
+          height: 85px;
+          overflow: hidden;
+
+            
+       }
+
+
+       #op {
+           margin-left: 15px;
+           animation-name: down;
+  animation-duration: 5s;  
+  animation-delay: 2s;
+  animation-fill-mode: backwards;
+       }
+
+       @keyframes down {
+  from {top: 0px; background-color: yellow;}
+  to {top: 200px;}
+}
+
+
+        .sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        #ca{
+            display: block;
+            width: 80%;
+            height: 300px;
+            margin-left: 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+            margin-top: 100px;
+            border: 3px solid black;
+        }
+
+        #co{
+            display: block;
+            width: 80%;
+            height: 300px;
+            margin-left: 20px;
+            background-color: black;
+            margin-top: 50px;
+            background-color: rgba(0, 0, 0, 0.7);
+            border: 3px solid black;
+
+
+          }
+
+        #ce {
+            display: block;
+            width: 40%;
+            height: 700px;
+            background-color: black;
+            float: right;
+            margin-right: 120px;
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+
+
+        #ci {
+            display:block;
+            width: 40%;
+            height: 700px;
+            background-color: black;
+            float: left;
+            margin-left: 140px;
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+
+        #footer{
+      width: 100%;
+      height: 500px;
+      background-color: rgba(0, 0, 0, 0.849);
+      border-top: 2px solid black;
+      margin-top: 800px;
+        }
+
+
+        #na {
+      margin-top: 450px;
+      margin-left: 50%;
+      color: aliceblue;
+  }
+
+        </style>
+        </head>
+        <body>
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a href="#">About</a>
+                <a href="#">Services</a>
+                <a href="#">Clients</a>
+                <a href="#">Contact</a>
+                <script>
+                    function openNav() {
+                      document.getElementById("mySidenav").style.width = "250px";
+                      document.getElementById("ca").style.marginLeft = "250px";
+
+                      document.body.style.backgroundColor = "rgba(0,0,0,0.7)";
+                    }
+                    
+                    function closeNav() {
+                      document.getElementById("mySidenav").style.width = "0";
+                      document.getElementById("ca").style.marginLeft= "0";
+                      document.body.style.backgroundColor = "white";
+                    }
+                    </script>
+            </div>
+
+
+
+            <div id=menu>
+            <h1 id=op style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menu</h1>
+            </div>
+
+
+            <br>            <br>
+
+
+            <center>
+                <div id=ca>
+                    G
+                    </div>
+                <br><br>
+            <div id=co>
+            G
+            </div>
+           <br><br>
+           <br><br>
+      
+            <div id=ce>
+                 B
+            </div>
+
+            <div id=ci>
+             S
+            </div>
+
+   
+        </center>
+
+        <br>
+        <br>    
+           
+           <div id=footer>
+           <p id=na>2021 © Boyo Lifestyle. BoyoQuiz.com. </p>
+
+          </div>
+        </body>
+        </html>
+        
