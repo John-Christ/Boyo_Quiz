@@ -13,10 +13,10 @@
         <script>
           function myFunction() {
             var x = document.getElementById("myDIV");
-            if (x.style.display == "") {
+            if (x.style.display == "none") {
               x.style.display = "block";
             } else {
-              x.style.display = "";
+              x.style.display = "none";
             }
           }
           </script>
@@ -25,10 +25,10 @@
 <script>
   function promo() {
     var x = document.getElementById("myDIV1");
-    if (x.style.display == "") {
+    if (x.style.display == "none") {
       x.style.display = "block";
     } else {
-      x.style.display = "";
+      x.style.display = "none";
     }
   }
   </script>
@@ -38,10 +38,10 @@
 <script>
   function packs() {
     var x = document.getElementById("myDIV2");
-    if (x.style.display == "") {
+    if (x.style.display == "none") {
       x.style.display = "block";
     } else {
-      x.style.display = "";
+      x.style.display = "none";
     }
   }
   </script>
@@ -216,7 +216,6 @@ font-size: small;
   }
 
   #myDIV {
-  display: none;
   width: 100%;
   padding: 50px 0;
   text-align: center;
@@ -226,7 +225,6 @@ font-size: small;
   
 
 #myDIV1 {
-  display: none;
   width: 100%;
   padding: 50px 0;
   text-align: center;
@@ -237,7 +235,6 @@ font-size: small;
 
 
 #myDIV2 {
-  display: none;
   width: 100%;
   padding: 50px 0;
   text-align: center;
@@ -330,7 +327,7 @@ font-size: small;
                     <div id=co>
                       <div class="text-block">
                       <h1>Discover how we can help...</h1>
-                     <a id=bu onclick="myFunction()">Click here!</a>
+                     <a id=bu onclick="myFunction()">Hide...</a>
                      <p id=myDIV>
                      <a href="" id=s1>1/ CIPC Regstration</a><br> <br>
                      <a href="" id=s2>2/ Website</a><br><br>
@@ -344,7 +341,7 @@ font-size: small;
             <div id=ca>
            <div class="text-block">
                 <h1>We can also help...</h1>
-                <a id=bu onclick="promo()">Click here!</a>
+                <a id=bu onclick="promo()">Hide...</a>
                      <p id=myDIV1>
                      <a href="" >1/ Product Promotion</a><br> <br>
                      <a href="" >2/ Website Promotion</a><br><br>
@@ -357,7 +354,7 @@ font-size: small;
             <div id=ce>
               <div class="text-block">
                 <h1>Our Packages</h1>
-                <a id=bu onclick="packs()">Click here!</a>
+                <a id=bu onclick="packs()">Hide...</a>
                      <p id=myDIV2>
                      <a href="" id=s1 >3x Pack</a><br> <br>
                      <a href="" id=s2>2x Pack</a><br><br>
