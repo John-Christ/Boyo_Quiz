@@ -35,6 +35,21 @@
 
 
 
+<script>
+  function packs() {
+    var x = document.getElementById("myDIV2");
+    if (x.style.display == "") {
+      x.style.display = "block";
+    } else {
+      x.style.display = "";
+    }
+  }
+  </script>
+
+
+
+
+
         <style> 
       
             body {
@@ -181,7 +196,7 @@
         }
 
 
-         #na {
+        #na {
     
       color: aliceblue;
       opacity: 0.3;
@@ -212,6 +227,19 @@ font-size: small;
   height: 30px;
   color: black;
 }
+
+
+#myDIV2 {
+  display: none;
+  width: 100%;
+  padding: 50px 0;
+  text-align: center;
+  background-color: rgba(0,0,0,0.7);
+  margin-top: 20px;
+  height: 30px;
+  color: black;
+}
+
   
 
   #bu {
@@ -298,9 +326,9 @@ font-size: small;
                       <h1>Discover how we can help...</h1>
                      <a id=bu onclick="myFunction()">Click here!</a>
                      <p id=myDIV>
-                     <a href="" id=s1>1/ CIPC Regstration</a>.<br> <br>
-                     <a href="" id=s2>2/ Website.</a><br><br>
-                    <a href="" id=s3>3/ Set your Online Payment.</a>
+                     <a href="" id=s1>1/ CIPC Regstration</a><br> <br>
+                     <a href="" id=s2>2/ Website</a><br><br>
+                    <a href="" id=s3>3/ Set your Online Payment</a>
                     </p> 
                     
                    
@@ -312,8 +340,8 @@ font-size: small;
                 <h1>We can also help...</h1>
                 <a id=bu onclick="promo()">Click here!</a>
                      <p id=myDIV1>
-                     <a href="" >1/ Product Promotion</a>.<br> <br>
-                     <a href="" >2/ Website Promotion.</a><br><br>
+                     <a href="" >1/ Product Promotion</a><br> <br>
+                     <a href="" >2/ Website Promotion</a><br><br>
                     </p> 
             </div>
            <br><br>
@@ -322,14 +350,19 @@ font-size: small;
       
             <div id=ce>
               <div class="text-block">
-                <h1>Discover how we can help...</h1>
+                <h1>Our Packages</h1>
+                <a id=bu onclick="packs()">Click here!</a>
+                     <p id=myDIV2>
+                     <a href="" id=s1 >3x Pack</a><br> <br>
+                     <a href="" id=s2>2x Pack</a><br><br>
+                    </p> 
        </div>
             </div>
                 <br><br>
 
             <div id=ci>
               <div class="text-block">
-                <h1>Discover how we can help...</h1>
+                <h1>Contact Us...</h1>
        </div>
             </div>
 
