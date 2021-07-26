@@ -6,7 +6,7 @@ const SECRET_KEY = 'sk_live_d2acec067LM2OJ9b1d5418b9b7d9'
 axios.post(
   'https://online.yoco.com/v1/charges/',
   {
-    token: 'tok_0PDoyIR0W405X5u4POhpQzU95V',
+    token: 'tok_mXAV2IAmPOPEEvTmAvTrzSaPX',
     amountInCents: 500,
     currency: 'ZAR',
   },
