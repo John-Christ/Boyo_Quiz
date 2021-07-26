@@ -4,9 +4,6 @@
 
   <style>
       #pay {
-        width: 100%;
-          height: 900px;
-              overflow: hidden;
       }
       
         </style>
@@ -19,8 +16,42 @@
 
 <body>
 
-<iframe src="https://pay.yoco.com/r/780QLG" id=pay>
-</iframe>
+    <center>
+        <div id=pay>
+        <script src="https://js.yoco.com/sdk/v1/yoco-sdk-web.js"></script>
+
+<!-- Create a pay button that will open the popup-->
+<button id="checkout-button">Pay</button>
+
+<script>
+  var yoco = new window.YocoSDK({
+    publicKey: 'pk_live_c441f26bAVy62Mr88a94',
+  });
+  var checkoutButton = document.querySelector('#checkout-button');
+  checkoutButton.addEventListener('click', function () {
+    yoco.showPopup({
+      amountInCents: 500,
+      currency: 'ZAR',
+      name: 'test 1',
+      description: 'Mytest',
+      callback: function (result) {
+        // This function returns a token that your server can use to capture a payment
+        if (result.error) {
+          const errorMessage = result.error.message;
+          alert("error occured: " + errorMessage);
+        } else {
+          alert("card successfully tokenised: " + result.id);
+        }
+        // In a real integration - you would now pass this chargeToken back to your
+        // server along with the order/basket that the customer has purchased.
+      }
+    })
+  });
+</script>
+        
+        </div>
+    
+    </center>
 
   
 
