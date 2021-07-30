@@ -141,31 +141,29 @@
         }
 
         #co {
-            background-image: url(https://ia801404.us.archive.org/9/items/we-serve-people/We%20serve%20people%20%281%29.png);
             position: relative;
-            width: 80%;
-            height: 600px;
+            width: 100%;
+            height: 400px;
              background-repeat: no-repeat;
+             margin-top: 70px;
  
            
  }
             
       #ce {
-            background-image:url(https://ia801405.us.archive.org/6/items/boyo-cov/boyo%20cov.png);
             position: relative;
-            width: 70%;
-            height: 300px;
-            margin-top: 600px;
+            width: 100%;
+            height: 400px;
+            margin-top: 300px;
             background-repeat: no-repeat;
 
  }    
             
             
           #ci {
-            background-image: url(https://ia601500.us.archive.org/1/items/proudly-african/Proudly%20African.png);
             position: relative;
-            width: 80%;
-            height: 370px;
+            width: 100%;
+            height: 400px;
             margin-top: 200px;
             background-repeat: no-repeat;
 
@@ -201,6 +199,31 @@
        to { top:100px;}
 }
    
+
+.text-block1 {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  background-color: rgba(0,0,0,0.5);
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 55%;
+  height: 200px;
+  animation-name: example;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+
+
+}
+
+@keyframes example {
+       from { bottom:50px;}
+       to { bottom:300px;}
+}
+
+
+
         #footer{
       width: 100%;
       height: 500px;
@@ -309,6 +332,14 @@ opacity: 0.6;
     #s5 {
         color:white;
             }
+
+            #img{
+    vertical-align: middle;
+    width: 100%;
+    box-shadow: 10px 10px 5px grey;
+
+
+   }
  
 </style>
  
@@ -354,8 +385,8 @@ opacity: 0.6;
                
 
                     <div id=co>
-                      
-                      <div class="text-block">
+                      <img id=img src=https://ia801404.us.archive.org/9/items/we-serve-people/We%20serve%20people%20%281%29.png>
+                      <div class="text-block1">
 
                       <h1>Our services...</h1>
                       <a id=bu onclick="packs()"></a>
@@ -380,6 +411,7 @@ opacity: 0.6;
 
 
              <div id=ce>
+               <img id=img src=https://ia801405.us.archive.org/6/items/boyo-cov/boyo%20cov.png>
               <div class="text-block">
                 <h2>Packages</h2>
                 <a id=bu onclick="packs()"></a>
@@ -396,6 +428,7 @@ opacity: 0.6;
                 <br><br>
 
             <div id=ci>
+              <img id=img src=https://ia601500.us.archive.org/1/items/proudly-african/Proudly%20African.png>
               <div class="text-block">
                 <h1>Contact us</h1>
                 <a id=bu onclick="packs()"></a>
