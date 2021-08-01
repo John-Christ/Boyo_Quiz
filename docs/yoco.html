@@ -2,73 +2,13 @@
 <html lang= "en-EN">
     <head>
 
-  <style>
-      #pay {
-      }
-      
-        </style>
-
-
+ 
 
 </head>
 
 
 
-<body>
 
-    <center>
-        <div id=pay>
-        <script src="https://js.yoco.com/sdk/v1/yoco-sdk-web.js"></script>
-
-<!-- Create a pay button that will open the popup-->
-<button id="checkout-button">Pay</button>
-
-<script>
-  var yoco = new window.YocoSDK({
-    publicKey: 'pk_live_c441f26bAVy62Mr88a94',
-  });
-  var checkoutButton = document.querySelector('#checkout-button');
-  checkoutButton.addEventListener('click', function () {
-    yoco.showPopup({
-      amountInCents: 500,
-      currency: 'ZAR',
-      name: 'test 1',
-      description: 'Mytest',
-    
-    })
-  });
-</script>
-            
-            <script> 
-            const axios = require('axios')
-
-// Anonymous test key. Replace with your key.
-const SECRET_KEY = 'sk_live_d2acec067LM2OJ9b1d5418b9b7d9'
-
-axios.post(
-  'https://online.yoco.com/v1/charges/',
-    {
-        body: {
-    token: 'tok_mXAV2IAmPOPEEvTmAvTrzSaPX',
-    amountInCents: 500,
-    currency: 'ZAR',
-  },
-    },
-  {
-    headers: {
-      'X-Auth-Secret-Key': SECRET_KEY,
-    },
-  },
-)
-.then(res => {
-  // res.status will contain the HTTP status code
-  // res.data will contain the response body
-})
-.catch(error => {
-  // handle errors
-})
-            
-            </script>
             
        <body>
         
