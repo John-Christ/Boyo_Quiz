@@ -9,12 +9,7 @@
 <script>
 function myMap() {
   
-  var marker = new google.maps.Marker({
-  position:myCenter,
-  icon:'pinkball.png'
-});
-
-marker.setMap(map);
+  
   
   
 var mapProp= {
@@ -23,6 +18,13 @@ var mapProp= {
 };
 var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
 }
+  
+  var marker = new google.maps.Marker({
+  position:myCenter,
+  icon:'pinkball.png'
+});
+
+marker.setMap(map);
   
   
   
