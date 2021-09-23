@@ -29,7 +29,7 @@ var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
 
   var x = document.getElementById("googleMap");
 
-function getLocation("myMap") {
+function getLocation() {
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(showPosition);
   } else { 
