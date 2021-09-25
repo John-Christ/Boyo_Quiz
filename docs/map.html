@@ -20,15 +20,16 @@
     // Initialize and add the map
 function initMap() {
   // The location of Uluru
-  const = { lat: -25.746131499999997, lng: 28.2110862 };
+  const pretorius = { lat: -25.746131499999997, lng: 28.2110862 };
   // The map, centered at Uluru
   const map = new google.maps.Map(document.getElementById("map"), {
     zoom: 8,
+    center: pretorius,
  
   });
   // The marker, positioned at Uluru
   const marker = new google.maps.Marker({
-    
+    position: pretorius,
     map: map,
   });
 }    
