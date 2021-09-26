@@ -51,7 +51,7 @@ function initMap() {
           infoWindow.setPosition(pos);
           infoWindow.setContent("You are here");
           infoWindow.open(map);
-          infowindow.style.background("red");
+          infowindow.style.background = "red";
           map.setCenter(pos);
           animation:google.infoWindow.Animation.BOUNCE
 
