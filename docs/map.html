@@ -39,7 +39,7 @@ function initMap() {
   locationButton.textContent = "Pan to Current Location";
   locationButton.classList.add("custom-map-control-button");
   map.controls[google.maps.ControlPosition.TOP_CENTER].push(locationButton);
-  locationButton.addEventListener("click", () => {
+{
     // Try HTML5 geolocation.
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(
@@ -84,7 +84,7 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
   </head>
   <body>
     <h3>My Google Maps Demo</h3>
-<button id="button">Click Me!</button>
+<button id="button" type=button>Click Me!</button>
     <!--The div element for the map -->
     <div id="map"></div>
 
