@@ -32,7 +32,7 @@ function initMap() {
 
   const locationButton = document.createElement("button");
 
-  locationButton.textContent = "Find yourself";
+  locationButton.textContent = "Click here to Find yourself";
   locationButton.style.width = "100px";
   locationButton.style.height = "50px";
   locationButton.style.background = "orange";
@@ -51,7 +51,7 @@ function initMap() {
           infoWindow.setPosition(pos);
           infoWindow.setContent("You are here");
           infoWindow.open(map);
-          infowindow.style.color("red");
+          infowindow.style.background("red");
           map.setCenter(pos);
           animation:google.infoWindow.Animation.BOUNCE
 
