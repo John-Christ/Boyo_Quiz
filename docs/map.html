@@ -34,6 +34,7 @@ function initMap() {
 
   locationButton.textContent = "Find yourself";
   locationButton.style.width = "200px";
+  locationButton.style.height = "80px";
   locationButton.classList.add("custom-map-control-button");
   map.controls[google.maps.ControlPosition.TOP_CENTER].push(locationButton);
   locationButton.addEventListener("click", () => {
@@ -50,7 +51,7 @@ function initMap() {
           infoWindow.setContent("You are here");
           infoWindow.open(map);
           map.setCenter(pos);
-          animation:google.maps.Animation.BOUNCE
+          animation:google.infoWindow.Animation.BOUNCE
 
         },
         () => {
