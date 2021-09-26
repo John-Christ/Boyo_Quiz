@@ -29,17 +29,12 @@ function initMap() {
     zoom: 18,
   });
   
-    // The marker, positioned at Uluru
-  const marker = new google.maps.Marker({
-    position: pos,
-    map: map,
-    animation:google.maps.Animation.BOUNCE
-
+  
     
     
   infoWindow = new google.maps.InfoWindow();
 
-  const locationButton = document.createElement("button");
+  const locationButton = document.getElementById("button");
 
   locationButton.textContent = "Pan to Current Location";
   locationButton.classList.add("custom-map-control-button");
@@ -89,6 +84,7 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
   </head>
   <body>
     <h3>My Google Maps Demo</h3>
+<button id="button">Click Me!</button>
     <!--The div element for the map -->
     <div id="map"></div>
 
