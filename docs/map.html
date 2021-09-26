@@ -30,7 +30,7 @@ function initMap() {
   });
   infoWindow = new google.maps.InfoWindow();
 
-  const locationButton = document.createElement("button");
+  const locationButton = document.createElement("button").style.size="200x100";
 
   locationButton.textContent = "Find yourself";
   locationButton.classList.add("custom-map-control-button");
