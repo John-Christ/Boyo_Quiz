@@ -33,8 +33,9 @@ function initMap() {
   const locationButton = document.createElement("button");
 
   locationButton.textContent = "Find yourself";
-  locationButton.style.width = "200px";
-  locationButton.style.height = "80px";
+  locationButton.style.width = "100px";
+  locationButton.style.height = "50px";
+  locationButton.style.background = "orange";
   locationButton.classList.add("custom-map-control-button");
   map.controls[google.maps.ControlPosition.TOP_CENTER].push(locationButton);
   locationButton.addEventListener("click", () => {
@@ -50,6 +51,7 @@ function initMap() {
           infoWindow.setPosition(pos);
           infoWindow.setContent("You are here");
           infoWindow.open(map);
+          infowindow.style.color("red");
           map.setCenter(pos);
           animation:google.infoWindow.Animation.BOUNCE
 
