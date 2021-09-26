@@ -30,9 +30,10 @@ function initMap() {
   });
   infoWindow = new google.maps.InfoWindow();
 
-  const locationButton = document.createElement("button").style.width="200px";
+  const locationButton = document.createElement("button");
 
   locationButton.textContent = "Find yourself";
+  locationButton.style.width = "200px";
   locationButton.classList.add("custom-map-control-button");
   map.controls[google.maps.ControlPosition.TOP_CENTER].push(locationButton);
   locationButton.addEventListener("click", () => {
