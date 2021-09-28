@@ -72,9 +72,9 @@ body {
 // src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
 function initMap() {
   const map = new google.maps.Map(document.getElementById("map"), {
-    mapTypeControl: true,
+    mapTypeControl: false,
     center: { lat: -25.731340, lng: 28.218370 },
-    zoom: 13,
+    zoom: 17,
   });
 
   new AutocompleteDirectionsHandler(map);
