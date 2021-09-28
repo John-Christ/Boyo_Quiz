@@ -221,20 +221,10 @@ class AutocompleteDirectionsHandler {
     <div id="map"></div>
 
     <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
-    <script>
-    // Create the script tag, set the appropriate attributes
-var script = document.createElement('script');
-script.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyB0o0oDlGr52EiHRX4R-ATRDUA4hOo1yxg&callback=initMap&libraries=places&v=weekly';
-script.async = true;
-
-// Attach your callback function to the `window` object
-window.initMap = function() {
-  // JS API is loaded and available
-};
-
-// Append the 'script' element to 'head'
-document.head.appendChild(script);
-    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB0o0oDlGr52EiHRX4R-ATRDUA4hOo1yxg&callback=initMap&libraries=places&v=weekly" async="true"> 
+    
+   </script>
+   
   </body>
 </html>
 
