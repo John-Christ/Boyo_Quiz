@@ -83,7 +83,7 @@ body {
 // src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
 function initMap() {
   const map = new google.maps.Map(document.getElementById("map"), {
-    mapTypeControl: false,
+    mapTypeControl: true,
     center: { lat: -25.731340, lng: 28.218370 },
     zoom: 17,
   });
@@ -197,6 +197,8 @@ class AutocompleteDirectionsHandler {
     
   </head>
   <body>
+    
+    <div style="display: none">
       <input
         id="origin-input"
         class="controls"
@@ -227,7 +229,7 @@ class AutocompleteDirectionsHandler {
 
         <input type="radio" name="type" id="changemode-driving" style="display: none"/>
         <label for="changemode-driving" style="display: none" >Driving</label>
-    
+    </div>
 
     <div id="map"></div>
 
