@@ -84,6 +84,48 @@ body {
   font-size: 13px;
   font-weight: 300;
 }
+      
+      
+      #red {
+       background-color: #fff;
+  font-family: Roboto;
+  font-size: 15px;
+  font-weight: 300;
+  margin-left: 48px;
+  padding: 0 11px 0 13px;
+  text-overflow: ellipsis;
+  width: 35%;
+         margin-top: 10px;
+  border: 1px solid transparent;
+  border-radius: 2px 0 0 2px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  height: 42px;
+  outline: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+      }
+      
+      #find {
+      
+         background-color: #fff;
+  font-family: Roboto;
+  font-size: 15px;
+  font-weight: 300;
+  margin-left: 12px;
+  padding: 0 11px 0 13px;
+  text-overflow: ellipsis;
+  width: 35%;
+         margin-top: 10px;
+  border: 1px solid transparent;
+  border-radius: 2px 0 0 2px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  height: 42px;
+  outline: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+        
+      }
     </style>
     
     
@@ -248,8 +290,13 @@ class AutocompleteDirectionsHandler {
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB0o0oDlGr52EiHRX4R-ATRDUA4hOo1yxg&callback=initMap&libraries=places&v=weekly" 
             async
             ></script>
-    <div id= inter>
     
+    
+    <div id= inter>
+      <button id=find> Find Yourself </button>
+      
+      <button id=req> Request </button>
+      
     </div>
     
   </body>
