@@ -252,7 +252,7 @@ class AutocompleteDirectionsHandler {
 
    let map, infoWindow;
 
-function initMap() {
+function unitMap() {
   map = new google.maps.Map(document.getElementById("map"), {
     mapTypeControl: false,
     center: {},
@@ -355,7 +355,7 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
     
     
     <div id= inter>
-      <button id=find onclick= "initMap()"> <b> Find Yourself </b> </button>
+      <button id=find onclick= "unitMap()"> <b> Find Yourself </b> </button>
       
       <button id=req> <b> Request </b> </button>
       
