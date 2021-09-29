@@ -262,11 +262,12 @@ class AutocompleteDirectionsHandler {
    let map, infoWindow;
 
 function unitMap() {
-  function initMap();
-  map = new google.maps.Map(document.getElementById("map"), {
-    mapTypeControl: false,
-    center: {},
-    zoom: 17,
+  initMap(){
+      const originInput = document.getElementById("origin-input");
+      originInput.push("locationButton");
+  };
+  map = google.maps.Map(document.getElementById("map"), {
+   
   });
   infoWindow = new google.maps.InfoWindow();
 
