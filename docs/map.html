@@ -146,6 +146,7 @@ class AutocompleteDirectionsHandler {
   travelMode;
   directionsService;
   directionsRenderer;
+  locationButton;
   constructor(map) {
     this.map = map;
     this.originPlaceId = "";
@@ -157,7 +158,15 @@ class AutocompleteDirectionsHandler {
 
     const originInput = document.getElementById("origin-input");
     const destinationInput = document.getElementById("destination-input");
-    const modeSelector = document.getElementById("mode-selector");
+    
+    
+        
+    
+    
+    
+    
+    
+   // const modeSelector = document.getElementById("mode-selector");
     const originAutocomplete = new google.maps.places.Autocomplete(originInput);
 
     // Specify just the place data fields that you need.
@@ -182,9 +191,7 @@ class AutocompleteDirectionsHandler {
     this.setupPlaceChangedListener(originAutocomplete, "ORIG");
     this.setupPlaceChangedListener(destinationAutocomplete, "DEST");
     this.map.controls[google.maps.ControlPosition.TOP_LEFT].push(originInput);
-    this.map.controls[google.maps.ControlPosition.TOP_LEFT].push(
-      destinationInput
-    );
+    this.map.controls[google.maps.ControlPosition.TOP_LEFT].push(destinationInput);
     this.map.controls[google.maps.ControlPosition.TOP_LEFT].push(modeSelector);
   }
   // Sets a listener on a radio button to change the filter type on Places
@@ -240,6 +247,24 @@ class AutocompleteDirectionsHandler {
   }
 }
     </script>
+
+    <script>
+
+   
+
+        function Myfind (){
+
+            const locationButton = document.getElementById("find");
+            navigator.geolocation.getCurrentPosition(
+        (map) => {
+            this.setupPlaceChangedListener(locationButton, "ORIG");
+        }
+        
+        
+       ) };
+
+     
+    </script>
     
     
     
@@ -288,7 +313,7 @@ class AutocompleteDirectionsHandler {
     
     
     <div id= inter>
-      <button id=find> <b> Find Yourself </b> </button>
+      <button id=find onclick=Myfind()> <b> Find Yourself </b> </button>
       
       <button id=req> <b> Request </b> </button>
       
@@ -296,6 +321,5 @@ class AutocompleteDirectionsHandler {
     
   </body>
 </html>
-
 
 
