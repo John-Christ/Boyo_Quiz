@@ -17,10 +17,19 @@
       
       /*my interface*/
       
+       #inter1 {
+        display: block;
+        width: 100%;
+         height: 10%;
+        margin-top: 0%;
+        background-color: #ff8c00;
+      
+      }
+      
       #inter {
         display: block;
         width: 100%;
-         height: 40%;
+         height: 30%;
         margin-bottom: 0%;
         background-color: #ff8c00;
       
@@ -253,6 +262,7 @@ class AutocompleteDirectionsHandler {
    let map, infoWindow;
 
 function unitMap() {
+  function initMap();
   map = new google.maps.Map(document.getElementById("map"), {
     mapTypeControl: false,
     center: {},
@@ -312,6 +322,8 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
     
   </head>
   <body>
+    
+    <div id=inter1></div>
     
     <div style="display: none">
       <input
