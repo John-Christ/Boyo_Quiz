@@ -146,7 +146,6 @@ function initMap() {
   });
 
   new AutocompleteDirectionsHandler(map);
-  new google.maps.InfoWindow(map);
 }
 
 class AutocompleteDirectionsHandler {
@@ -156,7 +155,7 @@ class AutocompleteDirectionsHandler {
   travelMode;
   directionsService;
   directionsRenderer;
-  locationButton;
+ 
   constructor(map) {
     this.map = map;
     this.originPlaceId = "";
@@ -260,10 +259,13 @@ class AutocompleteDirectionsHandler {
 
     <script>
 
-   let map, infoWindow, AutocompleteDirectionsHandler;
+   let map, infoWindow, 
 
 function unitMap() {
-   initMap();
+   
+  new AutocompleteDirectionsHandler(map);
+
+  
   map = new google.maps.Map(document.getElementById("map"), {
     mapTypeControl: false,
     center: {},
