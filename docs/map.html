@@ -148,9 +148,7 @@ function initMap() {
   new AutocompleteDirectionsHandler(map);
 
 
-  let map, infoWindow;
-
-function unitMap() {
+  
  
       const originInput = document.getElementById("origin-input");
       originInput.push("locationButton.value");
@@ -197,12 +195,9 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
   );
   infoWindow.open(map);
 
-  
-}
-
-
 
 }
+      
 
 class AutocompleteDirectionsHandler {
   map;
@@ -371,7 +366,7 @@ class AutocompleteDirectionsHandler {
     
     
     <div id= inter>
-      <button id=find onclick= "unitMap()"> <b> Find Yourself </b> </button>
+      <button id=find onclick= "initMap()"> <b> Find Yourself </b> </button>
       
       <button id=req> <b> Request </b> </button>
       
