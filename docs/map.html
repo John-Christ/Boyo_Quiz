@@ -100,8 +100,8 @@ body {
      float: right;
      width: 35%;
  
-     margin-top:10px;
-     margin-right:20px;
+     margin-top:20px;
+     
      background-color: #7cfc00;
      border: 1px solid transparent;
           font-size: 15px;
@@ -109,13 +109,15 @@ body {
      padding-top: 15px;
   padding-bottom: 15px;
         font-family: Roboto;
+        border-radius: 10px;
+        box-shadow: #fff;
         
 
         
 }
     
       
-      #find {
+ /*     #find {
        display: block;
         float: left;
         width: 35%;
@@ -256,67 +258,6 @@ class AutocompleteDirectionsHandler {
   }
 }
     </script>
-
-    <script>
-
- let map, infoWindow;
-
-function unitMap() {
-  map = new google.maps.Map(document.getElementById("map"), {
-    mapTypeControl: false,
-    center: { lat: -25.731340, lng: 28.218370 },
-    zoom: 17,
-  });
-  new AutocompleteDirectionsHandler("map");
-  
-  infoWindow = new google.maps.InfoWindow();
-
-  const locationButton = document.createElement("button");
-
- 
-  locationButton.addEventListener("click", () => {
-    // Try HTML5 geolocation.
-    if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(
-        (position) => {
-          const pos = {
-            lat: position.coords.latitude,
-            lng: position.coords.longitude,
-          };
-
-          infoWindow.setPosition(pos);
-          infoWindow.setContent("select and write a known place next to you as Pick-Up");
-          infoWindow.open(map);
-          map.setCenter(pos);
-
-        },
-        () => {
-          handleLocationError(true, infoWindow, map.getCenter());
-        }
-      );
-    } else {
-      // Browser doesn't support Geolocation
-      handleLocationError(false, infoWindow, map.getCenter());
-    }
-  });
-}
-
-function handleLocationError(browserHasGeolocation, infoWindow, pos) {
-  infoWindow.setPosition(pos);
-  infoWindow.setContent(
-    browserHasGeolocation
-      ? "Error: The Geolocation service failed."
-      : "Error: Your browser doesn't support geolocation."
-  );
-  infoWindow.open(map);
-
-  
-}
-    
-
-
-     
-    </script>
     
     
     
@@ -366,10 +307,11 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
     
     
     <div id= inter>
-      <button id=find onclick= "unitMap()"> <b> Find Yourself </b> </button>
+        <center>
+   <!--   <button id=find onclick= "unitMap()"> <b> Find Yourself </b> </button> -->
       
       <button id=req> <b> Request </b> </button>
-      
+    </center>
     </div>
     
   </body>
