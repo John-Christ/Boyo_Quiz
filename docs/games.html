@@ -1,271 +1,324 @@
 <!DOCTYPE html>
-<html lang= "fr-FR">
-    <head>
-
-              <!--$wcmPlaceholder("Home Page")--> 
-        <link rel="canonical" href="http://boyoquiz.com/">
-
-        <meta content="text/html"; charset = utf-8" http-equiv = "Content-Type">
-        <meta name="author" content="John Christ Bouma"> 
-        <link rel= "icon" href="https://ia601404.us.archive.org/1/items/whats-app-image-2021-02-27-at-13.08.16/WhatsApp%20Image%202021-02-27%20at%2013.08.16.jpeg" size="192x192">
-        <title>BOYO QUIZ</title>
-
-
-
-       <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-207407723-1">
-</script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-207407723-1');
-</script>
-
-
-
-
- 
-                                                                                                                                 
-        <!-- Global site tag (gtag.js) - Google Ads: 723984619 -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-723984619"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-
-gtag('config', 'AW-723984619');
-</script>
-                                                                                                                      
-<!-- Event snippet for Website traffic conversion page -->
-<script>
-gtag('event', 'conversion', {'send_to': 'AW-723984619/lq4CCNDo6_kBEOvBnNkC'});
-</script>
-                                                                                                                          
- 
-                                                                                                                            
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-RBDN0MJBJE"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-
-gtag('config', 'G-RBDN0MJBJE');
-</script>   
-                                                                            
-                                                                            
-    <script>
-            function myFunction() {
-              location.replace("https://boyoquiz.com")
-            }
-            </script>                                                                        
-
-
-    <style>
-        ul {
-  list-style-type: none;
-  
-  margin: 0;
-  padding: 15px;
-  overflow: hidden;
-  background-color:greenyellow;
-  height: 100px;                                                                          
-  
- }
-
- li {
-  float: left;
-                                                                           
-  
- }
-
- li a {
-  display: block;
-  color :blue;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
- }
-
- li a:hover {
-  background-color: yellow;
-
- }
-
- #logo{
-    float: right;
-    width: 40px;
-    height: 40px;
-    margin-right:40%;
-    border:solid 5px gold;
-    border-radius: 20px;
+<html>
+  <head>
+    <title>Boyo GPS</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="author" content="John Christ Bouma"> 
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
     
- }
-                                                                            
-  #img {
-     display: block;
-     width: 350px;
-   border-radius: 155px;
-  border-top: solid 4px gold;
-  border-bottom: solid 4px gold;
-  background-color: white;
- }  
-                                                                            
-#img1 {
-   display: block;
-     background-color: gold;
-     color: blue;
-     text-shadow:mediumspringgreen;
-     border-radius: 25px;
-     padding: 15px;
-     font: italic small-caps bold  Georgia, serif; 
-     width: 45px;                                                                  
-   }
-                                                                            
- #bloc {
-   display: block;
-   width: 100%;                                                                        
-   border-radius: 35px;
-  border-top: solid 4px gold;
-  border-bottom: solid 4px gold;
-  background-color:lightcyan;
- }
-
- #bloc1 {
-   display:block;
-   width: 100%;
-   height: 300px;
-   border-bottom: solid 5px gold;
-   border-radius: 35px;
-   overflow: auto;
-   background-color: white;
-                                                                         
- }
-
- #bloc2 {
-   display: block;
-   width: 100%;
-   height: 300px;
-   border-radius: 35px;
-   background-color: white;
-                                                                         
- }
-
-
-   
-
- #z { 
-  display:block;
-   float: right;
-  border-radius: 50px;
-  width:200px;
-  height: 200px;
-  margin-top: 50px;
-  margin-right: 20px;
- }
-
-
-
- #footer {
-
-  background-color: greenyellow;
-  padding: 20px;
-  overflow: hidden;
-  
-  padding-bottom: 0;
-  height: 100px;                                                                          
- }
-
-#f {
-  float:left;
-  border-radius: 50px;
-  width:200px;
-  height: 200px;
-  margin-right: 20px;
-
+    
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+#map {
+  height: 60%;
+  width: 100%;
 }
-                                                                            
-                                                                                
-                                         
-                                                    
+      
+      /*my interface*/
+      
+       #inter1 {
+        display: block;
+        width: 100%;
+         height: 10%;
+        margin-top: 0%;
+        background-color: #ff8c00;
+      
+      }
+      
+      #inter {
+        display: block;
+        width: 100%;
+         height: 30%;
+        margin-bottom: 0%;
+        background-color: #ff8c00;
+      
+      }
+
+/* Optional: Makes the sample page fill the window. */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.controls {
+  margin-top: 10px;
+  border: 1px solid transparent;
+  border-radius: 2px 0 0 2px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  height: 42px;
+  outline: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+#origin-input {
+  background-color: #fff;
+  font-family: Roboto;
+  font-size: 15px;
+  font-weight: 300;
+  margin-left: 12px;
+  padding: 0 11px 0 13px;
+  text-overflow: ellipsis;
+  width: 35%;
+}
+      
+      #destination-input {
+  background-color: #fff;
+  font-family: Roboto;
+  font-size: 15px;
+  font-weight: 300;
+  margin-left: 48px;
+  padding: 0 11px 0 13px;
+  text-overflow: ellipsis;
+  width: 35%;
+}
+
+#origin-input:focus,
+#destination-input:focus {
+  border-color: #4d90fe;
+}
+
+#mode-selector {
+  color: #fff;
+  background-color: #4d90fe;
+  margin-left: 12px;
+  padding: 5px 11px 0px 11px;
+}
+
+#mode-selector label {
+  font-family: Roboto;
+  font-size: 13px;
+  font-weight: 300;
+}
+      
+      
+      #req {
+        display: block; 
+        width: 35%; 
+        background-color: #7cfc00;
+        border: 1px solid white;
+        font-size: 15px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        font-family: Roboto;
+        border-radius: 10px;
+        
+}
+    
+      
+      #logo {
+            width:60px;
+            margin-left: 10px;
+            height:60px;
+                   
+      }
+      
+      
+      
+ /*     #find {
+       display: block;
+        float: left;
+        width: 35%;
+
+     margin-top:10px;
+     margin-left:20px;
+     background-color: white;
+     border: 1px solid transparent;
+         font-size: 15px;
+     padding-top: 15px;
+     padding-bottom: 15px;  
+      font-family: Roboto;
+      }
+      
     </style>
-    </head>
+    
+    
+    <script>
+    // This example requires the Places library. Include the libraries=places
+// parameter when you first load the API. For example:
+// <script
+// src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
+function initMap() {
+  const map = new google.maps.Map(document.getElementById("map"), {
+    mapTypeControl: false,
+    center: { lat: -25.731340, lng: 28.218370 },
+    zoom: 17,
+  });
 
-    <body>
-        <ul>
-           
-                        
+  new AutocompleteDirectionsHandler(map);
+}
 
-            <img id=logo src="https://ia601404.us.archive.org/1/items/whats-app-image-2021-02-27-at-13.08.16/WhatsApp%20Image%202021-02-27%20at%2013.08.16.jpeg">              
-          </ul>
-          <center>
-            <br>
-            
-             <br>
-             
-          
-            <div id=bloc1>
-              <a href=his.html>
-          <img id=z src="z.gif">
-           <h1>Histoire</h1>
-           
-           <h5 >Teste tes connaissances<br>
-          en Histoire et recois les felicitations<br>
-        du vieux Nzengue.</h5>
-           </a>   
-            </div>
-<br>
-            <div id=bloc1>
-            <a href=geo.html>
-              <img id=z src="a.gif">
-           <h1>Geographie</h1>
-           
-           <h5 >Teste tes connaissances<br>
-          en Geographie et recois les felicitations<br>
-        du President.</h5>
-          </a>
-            </div>
+class AutocompleteDirectionsHandler {
+  map;
+  originPlaceId;
+  destinationPlaceId;
+  travelMode;
+  directionsService;
+  directionsRenderer;
+ 
+  constructor(map) {
+    this.map = map;
+    this.originPlaceId = "";
+    this.destinationPlaceId = "";
+    this.travelMode = google.maps.TravelMode.DRIVING;
+    this.directionsService = new google.maps.DirectionsService();
+    this.directionsRenderer = new google.maps.DirectionsRenderer();
+    this.directionsRenderer.setMap(map);
+
+    const originInput = document.getElementById("origin-input");
+    const destinationInput = document.getElementById("destination-input");
+    
+    
         
-            
-          
-       
+    
+    
+    
+    
+    
+   // const modeSelector = document.getElementById("mode-selector");
+    const originAutocomplete = new google.maps.places.Autocomplete(originInput);
+
+    // Specify just the place data fields that you need.
+    originAutocomplete.setFields(["place_id"]);
+
+    const destinationAutocomplete = new google.maps.places.Autocomplete(destinationInput);
+
+    // Specify just the place data fields that you need.
+    destinationAutocomplete.setFields(["place_id"]);
+   // this.setupClickListener(
+   //   "changemode-walking",
+    //  google.maps.TravelMode.WALKING
+ //   );
+  //  this.setupClickListener(
+  //    "changemode-transit",
+  //    google.maps.TravelMode.TRANSIT
+//    );
+ //   this.setupClickListener(
+ //     "changemode-driving",
+ //     google.maps.TravelMode.DRIVING
+ //   );
+    this.setupPlaceChangedListener(originAutocomplete, "ORIG");
+    this.setupPlaceChangedListener(destinationAutocomplete, "DEST");
+    this.map.controls[google.maps.ControlPosition.TOP_LEFT].push(originInput);
+    this.map.controls[google.maps.ControlPosition.TOP_LEFT].push(destinationInput);
+    this.map.controls[google.maps.ControlPosition.TOP_LEFT].push(modeSelector);
+  }
+  // Sets a listener on a radio button to change the filter type on Places
+  // Autocomplete.
+  setupClickListener(id, mode) {
+    const radioButton = document.getElementById(id);
+
+    radioButton.addEventListener("click", () => {
+      this.travelMode = mode;
+      this.route();
+    });
+  }
+  setupPlaceChangedListener(autocomplete, mode) {
+    autocomplete.bindTo("bounds", this.map);
+    autocomplete.addListener("place_changed", () => {
+      const place = autocomplete.getPlace();
+
+      if (!place.place_id) {
+        window.alert("Please select an option from the dropdown list.");
+        return;
+      }
+
+      if (mode === "ORIG") {
+        this.originPlaceId = place.place_id;
+      } else {
+        this.destinationPlaceId = place.place_id;
+      }
+
+      this.route();
+    });
+  }
+  route() {
+    if (!this.originPlaceId || !this.destinationPlaceId) {
+      return;
+    }
+
+    const me = this;
+
+    this.directionsService.route(
+      {
+        origin: { placeId: this.originPlaceId },
+        destination: { placeId: this.destinationPlaceId },
+        travelMode: this.travelMode,
+      },
+      (response, status) => {
+        if (status === "OK") {
+          me.directionsRenderer.setDirections(response);
+        } else {
+          window.alert("Directions request failed due to " + status);
+        }
+      }
+    );
+  }
+}
+    </script>
+    
+    
+    
+  </head>
+  <body>
+    
+    <div id=inter1>
+    <img src="https://ia601504.us.archive.org/9/items/voug_20210930/VOUG.png" id="logo">
+    </div>
+    
+    
+    
+    
+    <div style="display: none">
+      <input
+        id="origin-input"
+        class="controls"
+        type="text"
+        placeholder="From"
+      />
 
 
+    
+      <input
+        id="destination-input"
+        class="controls"
+        type="text"
+        placeholder="To"
+      />
 
- <br>
-           <div id=bloc1>
-           <a href=act.html>
-            <img id=z src="a.gif">
-           <h1>Actualite</h1>
-           
-           <h5 >Teste tes connaissances<br>
-          sur l'Actualite et recois les felicitations<br>
-        du President.</h5>
-          </a>
-           </div>
+   <!--   <div id="mode-selector" class="controls">
+        <input
+          type="radio"
+          name="type"
+          id="changemode-walking"
+          checked="checked"
+        />
+        <label for="changemode-walking">Walking</label>
+        <input type="radio" name="type" id="changemode-transit" />
+        <label for="changemode-transit">Transit</label> -->
 
+        <input type="radio" name="type" id="changemode-driving" style="display: none"/>
+        <label for="changemode-driving" style="display: none" >Driving</label>
+    </div>
 
-  <br>         
-           <div id=bloc2>
-            <a href=foc.html>
-            <img id=z src="z.gif">
-           <h1>Focalisateur de chances</h1>
-           
-           <h5>D'apres un ancien savant chinois,<br> 
-              harmoniser l'esprit tous les matins<br>
-             avec peu d'elements du hasard<br> 
-            aide a praparer une journee de succes. </h5>
-            <p>essayez <b>!!!</b></p>
-            </a>
-          </div>
+    <div id="map"></div>
 
-
-
-
-
-                  
-        
-    </body>
+    <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB0o0oDlGr52EiHRX4R-ATRDUA4hOo1yxg&callback=initMap&libraries=places&v=weekly" 
+            async
+            ></script>
+    
+    
+    <div id= inter>
+        <center>
+   <!--   <button id=find onclick= "unitMap()"> <b> Find Yourself </b> </button> -->
+      <br>
+      <button id=req> <b> Request </b> </button>
+    </center>
+    </div>
+    
+  </body>
 </html>
