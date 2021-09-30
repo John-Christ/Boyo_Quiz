@@ -259,23 +259,16 @@ class AutocompleteDirectionsHandler {
 
     <script>
 
-   let map, infoWindow, 
+ let map, infoWindow;
 
 function unitMap() {
-   
-
-  
-  map =  google.maps.Map(document.getElementById("map"), {
-    mapTypeControl: false,
-    center: {lat: -25.731340, lng: 28.218370 },
+  map = new google.maps.Map(document.getElementById("map"), {
+    center: { lat: -25.731340, lng: 28.218370 },
     zoom: 17,
   });
-  
-
-
   infoWindow = new google.maps.InfoWindow();
 
-  const locationButton = document.getElementById("find");
+  const locationButton = document.createElement("button");
 
  
   locationButton.addEventListener("click", () => {
@@ -316,7 +309,6 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
 
   
 }
-
     
 
 
