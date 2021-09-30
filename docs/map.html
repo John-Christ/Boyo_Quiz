@@ -263,7 +263,6 @@ class AutocompleteDirectionsHandler {
 
 function unitMap() {
    
-  new AutocompleteDirectionsHandler(map);
 
   
   map = new google.maps.Map(document.getElementById("map"), {
@@ -271,6 +270,9 @@ function unitMap() {
     center: {},
     zoom: 17,
   });
+  
+  new AutocompleteDirectionsHandler(map);
+
   infoWindow = new google.maps.InfoWindow();
 
   const locationButton = document.getElementById("find");
