@@ -158,6 +158,7 @@ class AutocompleteDirectionsHandler {
   travelMode;
   directionsService;
   directionsRenderer;
+  getLocation;
   constructor(map) {
     this.map = map;
     this.originPlaceId = "";
@@ -166,10 +167,13 @@ class AutocompleteDirectionsHandler {
     this.directionsService = new google.maps.DirectionsService();
     this.directionsRenderer = new google.maps.DirectionsRenderer();
     this.directionsRenderer.setMap(map);
+    this.getLocation = google.maps.originAutocomplete();
 
     const originInput = document.getElementById("origin-input");
-    const x = document.getElementById("find");
-function getLocation() {
+
+    function getLocation() {
+    const location = document.getElementById("find");
+
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition("originPlaceId");
   } else {
@@ -335,3 +339,4 @@ function getLocation() {
     
   </body>
 </html>
+
