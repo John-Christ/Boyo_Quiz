@@ -263,9 +263,12 @@ class AutocompleteDirectionsHandler {
 
 function unitMap() {
   map = new google.maps.Map(document.getElementById("map"), {
+    mapTypeControl: false,
     center: { lat: -25.731340, lng: 28.218370 },
     zoom: 17,
   });
+  new AutocompleteDirectionsHandler("map");
+  
   infoWindow = new google.maps.InfoWindow();
 
   const locationButton = document.createElement("button");
@@ -282,7 +285,7 @@ function unitMap() {
           };
 
           infoWindow.setPosition(pos);
-          infoWindow.setContent("YOU ARE HERE");
+          infoWindow.setContent("select and write a known place next to you as Pick-Up");
           infoWindow.open(map);
           map.setCenter(pos);
 
