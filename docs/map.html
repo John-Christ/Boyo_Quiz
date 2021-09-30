@@ -146,10 +146,8 @@ function initMap() {
   });
 
   new AutocompleteDirectionsHandler(map);
-
-
+  new google.maps.InfoWindow(map);
 }
-      
 
 class AutocompleteDirectionsHandler {
   map;
@@ -158,7 +156,7 @@ class AutocompleteDirectionsHandler {
   travelMode;
   directionsService;
   directionsRenderer;
-  getLocation;
+  locationButton;
   constructor(map) {
     this.map = map;
     this.originPlaceId = "";
@@ -167,21 +165,8 @@ class AutocompleteDirectionsHandler {
     this.directionsService = new google.maps.DirectionsService();
     this.directionsRenderer = new google.maps.DirectionsRenderer();
     this.directionsRenderer.setMap(map);
-    this.getLocation = google.maps.originAutocomplete();
 
     const originInput = document.getElementById("origin-input");
-
-    function getLocation() {
-    const location = document.getElementById("find");
-
-  if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition("originPlaceId");
-  } else {
-    x.innerHTML = "Geolocation is not supported by this browser.";
-  }
-}
-    
-    
     const destinationInput = document.getElementById("destination-input");
     
     
@@ -275,7 +260,59 @@ class AutocompleteDirectionsHandler {
 
     <script>
 
+   let map, infoWindow, AutocompleteDirectionsHandler;
+
+function unitMap() {
+   initMap();
+  map = new google.maps.Map(document.getElementById("map"), {
+    mapTypeControl: false,
+    center: {},
+    zoom: 17,
+  });
+  infoWindow = new google.maps.InfoWindow();
+
+  const locationButton = document.getElementById("find");
+
+ 
+  locationButton.addEventListener("click", () => {
+    // Try HTML5 geolocation.
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(
+        (position) => {
+          const pos = {
+            lat: position.coords.latitude,
+            lng: position.coords.longitude,
+          };
+
+          infoWindow.setPosition(pos);
+          infoWindow.setContent("YOU ARE HERE");
+          infoWindow.open(map);
+          map.setCenter(pos);
+          map.setupPlaceChangedListener(originAutocomplete);
+
+        },
+        () => {
+          handleLocationError(true, infoWindow, map.getCenter());
+        }
+      );
+    } else {
+      // Browser doesn't support Geolocation
+      handleLocationError(false, infoWindow, map.getCenter());
+    }
+  });
+}
+
+function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+  infoWindow.setPosition(pos);
+  infoWindow.setContent(
+    browserHasGeolocation
+      ? "Error: The Geolocation service failed."
+      : "Error: Your browser doesn't support geolocation."
+  );
+  infoWindow.open(map);
+
   
+}
 
     
 
@@ -331,7 +368,7 @@ class AutocompleteDirectionsHandler {
     
     
     <div id= inter>
-      <button id=find onclick= "getLocation()"> <b> Find Yourself </b> </button>
+      <button id=find onclick= "unitMap()"> <b> Find Yourself </b> </button>
       
       <button id=req> <b> Request </b> </button>
       
@@ -339,4 +376,3 @@ class AutocompleteDirectionsHandler {
     
   </body>
 </html>
-
