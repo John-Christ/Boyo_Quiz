@@ -113,8 +113,19 @@ body {
             width:60px;
             margin-left: 10px;
             height:60px;
+            animation-name: log;
+           animation-duration: 3s;
+           animation-iteration-count: infinite;
                    
       }
+      
+      @keyframes log {
+  0%   {  width:60px;}
+  25%  {  top:40px;}
+  50%  {  top:70px;}
+  75%  { top:40px;}
+  100% { top:60px;}
+}
       
       
       
@@ -266,7 +277,9 @@ class AutocompleteDirectionsHandler {
   <body>
     
     <div id=inter1>
+      <center>
     <img src="https://ia601504.us.archive.org/9/items/voug_20210930/VOUG.png" id="logo">
+      </center>
     </div>
     
     
