@@ -130,35 +130,21 @@ body {
         
         
         
-      .dropdown {
-  position: relative;
-  display: inline-block;
-  margin-bottom: 10px;
-  margin-left:10px;
+      
+        #bar {
+     float: left;
+          margin-left: 10px;
+          margin-bottom:20px;
 }
 
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  padding: 12px 16px;
-  z-index: 1;
-  margin-left: 10px;
-  margin-bottom: 10px;
-}
 
-.dropdown:hover .dropdown-content {
-  display: block;
-}  
         
         
         #boyo{
-            display:block;
+          
             float:right;
-          margin-right:10px;
-            margin-bottom: 10px;
+          margin-right:20px;
+            margin-bottom: 20px;
         }     
         
       
@@ -302,8 +288,10 @@ class AutocompleteDirectionsHandler {
     );
   }
 }
+      
     </script>
     
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     
     
   </head>
@@ -365,13 +353,9 @@ class AutocompleteDirectionsHandler {
       <button id=req> <b> Request </b> </button>
     </center>
       
-     <div class="dropdown">
-  <i class="fas fa-bars"></i>
-  <div class="dropdown-content">
-  <p>Login</p>
-   <p>Report</p>
-  </div>
-</div>
+    
+  <i class="fas fa-bars" id=bar></i>
+
      
       
       <p id=boyo> <b> Powered by Boyo Lifestyle<b/></p>
