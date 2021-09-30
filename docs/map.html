@@ -265,9 +265,9 @@ function unitMap() {
    
 
   
-  map = new google.maps.Map(document.getElementById("map"), {
+  map =  google.maps.Map(document.getElementById("map"), {
     mapTypeControl: false,
-    center: {},
+    center: {lat: -25.731340, lng: 28.218370 },
     zoom: 17,
   });
   
@@ -292,7 +292,6 @@ function unitMap() {
           infoWindow.setContent("YOU ARE HERE");
           infoWindow.open(map);
           map.setCenter(pos);
-          map.setupPlaceChangedListener(originAutocomplete);
 
         },
         () => {
