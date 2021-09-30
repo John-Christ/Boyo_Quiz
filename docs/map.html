@@ -152,7 +152,7 @@ function initMap() {
  
 
  
-  infoWindow = google.maps.InfoWindow();
+  const infoWindow = new google.maps.InfoWindow(originInput);
 
   const locationButton = document.getElementById("find");
 
@@ -168,7 +168,7 @@ function initMap() {
           };
 
           infoWindow.setPosition(pos);
-          infoWindow.setContent("YOU ARE HERE");
+          infoWindow.setContent("You are here");
           infoWindow.open(map);
           map.setCenter(pos);
 
@@ -215,8 +215,6 @@ class AutocompleteDirectionsHandler {
     this.directionsRenderer.setMap(map);
 
     const originInput = document.getElementById("origin-input");
-    originInput.push("locationButton.result");
-
     const destinationInput = document.getElementById("destination-input");
     
     
