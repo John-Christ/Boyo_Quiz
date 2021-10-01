@@ -161,18 +161,20 @@ body {
 }
    
     #loader {
-  border: 16px solid #f3f3f3;
-  border-radius: 50%;
-  border-top: 16px solid blue;
-  border-right: 16px solid green;
-  border-bottom: 16px solid red;
-  border-left: 16px solid pink;
+ position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
   width: 120px;
   height: 120px;
+  margin: -76px 0 0 -76px;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+   border-right: 16px solid green;
+  border-bottom: 16px solid red;
+  border-left: 16px solid pink;
+  -webkit-animation: spin 2s linear infinite;
   animation: spin 2s linear infinite;
-      
-      margin-left: 50%;
-      margin-top: 50%;
 }
 
 
@@ -185,18 +187,7 @@ body {
     </style>
     
     
-    <script>
-var myVar;
-
-function myLoader() {
-  myVar = setTimeout(showPage, 5000);
-}
-
-function showPage() {
-  document.getElementById("loader").style.display = "none";
-  document.getElementById("myDiv").style.display = "block";
-}
-</script>
+   
     
     
     <script>
@@ -333,11 +324,11 @@ class AutocompleteDirectionsHandler {
   </head>
   
   
-  <body onload="myLoader()">
+  <body >
     
     <img src="https://ia601504.us.archive.org/9/items/voug_20210930/Copy%20of%20VOUG.png" id="loader">
     
-    <div style="display:none;" id="myDiv">
+    <div >
       
     <div id=inter1>
       <center>
