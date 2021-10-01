@@ -159,9 +159,10 @@ body {
        #find:hover {
   background-color: #3e8e41;
 }
-   
+      
+      
     #loader {
- position: absolute;
+  position: absolute;
   left: 50%;
   top: 50%;
   z-index: 1;
@@ -177,51 +178,40 @@ body {
   animation: spin 2s linear infinite;
 }
 
-
-@keyframes spin {
+      
+      @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
-}  
+}
+
+      
+      .animate-bottom {
+ 
+  animation-name: animatebottom;
+  animation-duration: 1s
+}
+
+
+@keyframes animatebottom { 
+  from{ opacity:0 } 
+  to{  opacity:1 }
+}
       
       
-      
-      .load {
-            
-            animation-name: spon;
-  animation-duration: 6s;  
-  animation-fill-mode: forwards;
-      }
-      
-      
-      @keyframes spon {
-            
-           from {display: block;}
-  to {display: none;}
-      }
-      
-      
-      
-     #cnt   {
-            
-            animation-name: spun;
-  animation-duration: 7s;  
-  animation-fill-mode: forwards;
-      }
-      
-      
-      @keyframes spun {
-            
-           from {display: none;}
-  to {display: block;}
-      }
-      
-      
+      #myDiv {
+  display: none;
+}
       
       
     </style>
     
+    <script>
+
+</script>
+
     
-   
+    
+    
     
     
     <script>
@@ -346,24 +336,30 @@ class AutocompleteDirectionsHandler {
     );
   }
 }
+      let myVar;
+
+function myFunction() {
+  myVar = setTimeout(showPage, 3000);
+}
+
+function showPage() {
+  document.getElementById("loader").style.display = "none";
+  document.getElementById("myDiv").style.display = "block";
+}
       
     </script>
     
     
+    
+  </head>
+  <body onload="myFunction()" >
+    
+    <img src="https://ia601504.us.archive.org/9/items/voug_20210930/Copy%20of%20VOUG.png" id="loader">
+    
+    <div id="myDiv" class="animate-bottom">
 
     
     
-    
-    
-  </head>
-  
-  
-  <body >
-    
-    <img src="https://ia601504.us.archive.org/9/items/voug_20210930/Copy%20of%20VOUG.png" id="loader" class="load">
-    
-    <div id="cnt">
-      
     <div id=inter1>
       <center>
     <img src="https://ia601504.us.archive.org/9/items/voug_20210930/VOUG.png" id="logo">
@@ -373,7 +369,7 @@ class AutocompleteDirectionsHandler {
     
     
     
-    <div style="display: none">
+    <div style="display: none" >
       <input
         id="origin-input"
         class="controls"
@@ -421,19 +417,12 @@ class AutocompleteDirectionsHandler {
       <button id=req> <b> Request </b> </button>
     </center>
     </div> 
-          
-          
-    <div>
+    
      <center>
        <p style="font-size: 12px; margin-bottom: 10px; color:#dcdcdc; "> <b> Powered by Boyo Lifestyle <b> </p>
-     </center>            
-       </div>
-          </div>
-          
-          
+     </center>
    
-
          
-          
+       </div>
   </body>
 </html>
