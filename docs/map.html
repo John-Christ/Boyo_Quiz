@@ -250,6 +250,7 @@ class AutocompleteDirectionsHandler {
       this.route();
     });
   }
+  
   setupPlaceChangedListener(autocomplete, mode) {
     autocomplete.bindTo("bounds", this.map);
     autocomplete.addListener("place_changed", () => {
