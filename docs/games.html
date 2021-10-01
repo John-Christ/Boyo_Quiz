@@ -206,16 +206,17 @@ body {
       
       #not {
        animation-name: example;
-  animation-duration: 4s;
+  animation-duration: 9s;
+        display:none;
   
       }
       
       @keyframes example {
-  0%   {color:white; }
+
   25%  {background-color:yellow; }
-  50%  {background-color:blue; }
-  75%  {background-color:green; }
-  100% {background-color:black; }
+  50%  {background-color:blue; display:block;}
+  75%  {background-color:green; display:block;}
+  100% {background-color:black; display:block;}
 }
       
       
