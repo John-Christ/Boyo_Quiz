@@ -206,16 +206,7 @@ body {
     </style>
     
     <script>
-var myVar;
 
-function myFunction() {
-  myVar = setTimeout(showPage, 3000);
-}
-
-function showPage() {
-  document.getElementById("loader").style.display = "none";
-  document.getElementById("myDiv").style.display = "block";
-}
 </script>
 
     
@@ -345,13 +336,23 @@ class AutocompleteDirectionsHandler {
     );
   }
 }
+      var myVar;
+
+function myFunction() {
+  myVar = setTimeout(showPage, 3000);
+}
+
+function showPage() {
+  document.getElementById("loader").style.display = "none";
+  document.getElementById("myDiv").style.display = "block";
+}
       
     </script>
     
     
     
   </head>
-  <body onload=  "var myVar=window.setTimeout('myFunction()', 3000);  const map=window.setTimein('initMap()', 3000);">
+  <body onload="myFunction()" >
     
     <img src="https://ia601504.us.archive.org/9/items/voug_20210930/Copy%20of%20VOUG.png" id="loader">
     
