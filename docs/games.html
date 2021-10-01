@@ -184,6 +184,40 @@ body {
 }  
       
       
+      
+      .load {
+            
+            animation-name: spon;
+  animation-duration: 6s;  
+  animation-fill-mode: forwards;
+      }
+      
+      
+      @keyframes spon {
+            
+           from {display: block;}
+  to {display: none;}
+      }
+      
+      
+      
+     #cnt   {
+            
+            animation-name: spun;
+  animation-duration: 7s;  
+  animation-fill-mode: forwards;
+      }
+      
+      
+      @keyframes spun {
+            
+           from {display: none;}
+  to {display: block;}
+      }
+      
+      
+      
+      
     </style>
     
     
@@ -326,9 +360,9 @@ class AutocompleteDirectionsHandler {
   
   <body >
     
-    <img src="https://ia601504.us.archive.org/9/items/voug_20210930/Copy%20of%20VOUG.png" id="loader">
+    <img src="https://ia601504.us.archive.org/9/items/voug_20210930/Copy%20of%20VOUG.png" id="loader" class="load">
     
-    <div >
+    <div id="cnt">
       
     <div id=inter1>
       <center>
