@@ -160,7 +160,67 @@ body {
   background-color: #3e8e41;
 }
       
+      
+    #loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  width: 120px;
+  height: 120px;
+  margin: -76px 0 0 -76px;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+   border-right: 16px solid green;
+  border-bottom: 16px solid red;
+  border-left: 16px solid pink;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+      
+      @keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+      
+      .animate-bottom {
+ 
+  animation-name: animatebottom;
+  animation-duration: 1s
+}
+
+
+@keyframes animatebottom { 
+  from{ opacity:0 } 
+  to{  opacity:1 }
+}
+      
+      
+      #myDiv {
+  display: none;
+}
+      
+      
     </style>
+    
+    <script>
+var myVar;
+
+function myFunction() {
+  myVar = setTimeout(showPage, 3000);
+}
+
+function showPage() {
+  document.getElementById("loader").style.display = "none";
+  document.getElementById("myDiv").style.display = "block";
+}
+</script>
+
+    
+    
+    
     
     
     <script>
@@ -291,7 +351,13 @@ class AutocompleteDirectionsHandler {
     
     
   </head>
-  <body>
+  <body onload="myFunction()" >
+    
+    <img src="https://ia601504.us.archive.org/9/items/voug_20210930/Copy%20of%20VOUG.png" id="loader">
+    
+    <div id="myDiv" class="animate-bottom">
+
+    
     
     <div id=inter1>
       <center>
@@ -355,5 +421,7 @@ class AutocompleteDirectionsHandler {
        <p style="font-size: 12px; margin-bottom: 10px; color:#dcdcdc; "> <b> Powered by Boyo Lifestyle <b> </p>
      </center>
    
+         
+       </div>
   </body>
 </html>
