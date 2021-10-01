@@ -172,7 +172,7 @@ body {
   animation: spin 2s linear infinite;
       
       margin-left: 50%;
-      margin-right: 50%;
+      margin-top: 50%;
 }
 
 
@@ -183,6 +183,20 @@ body {
       
       
     </style>
+    
+    
+    <script>
+var myVar;
+
+function myLoader() {
+  myVar = setTimeout(showPage, 5000);
+}
+
+function showPage() {
+  document.getElementById("loader").style.display = "none";
+  document.getElementById("myDiv").style.display = "block";
+}
+</script>
     
     
     <script>
@@ -310,18 +324,7 @@ class AutocompleteDirectionsHandler {
       
     </script>
     
-    <script>
-var myVar;
-
-function myLoader() {
-  myVar = setTimeout(showPage, 5000);
-}
-
-function showPage() {
-  document.getElementById("loader").style.display = "none";
-  document.getElementById("myDiv").style.display = "block";
-}
-</script>
+    
 
     
     
