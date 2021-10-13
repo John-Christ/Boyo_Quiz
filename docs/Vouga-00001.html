@@ -334,15 +334,8 @@ class AutocompleteDirectionsHandler {
         <input type="radio" name="type" id="changemode-driving" style="display: none"/>
         <label for="changemode-driving" style="display: none" >Driving</label>
     </div>
-  
-    <div id="map"></div>
-
-    <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB0o0oDlGr52EiHRX4R-ATRDUA4hOo1yxg&callback=initMap&libraries=places&v=weekly" 
-            async
-            ></script>
-    
-     <center>
+   
+    <center>
     <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScBwt8GZIvcTZdeCE82jypQXAWI7BMpbx01iaMAHNddlSui-A/formResponse" target="hidden_iframe" onsubmit="submitted=true" method="POST">
 
    
@@ -368,8 +361,8 @@ class AutocompleteDirectionsHandler {
       
         
        </div>  
-     <br>
-      <div id="menu">
+    
+      <div id="menu"> </div>
        <br>
    <!--   <button id=find onclick= "unitMap()"> <b> Find Yourself </b> </button> -->
   
@@ -377,10 +370,19 @@ class AutocompleteDirectionsHandler {
            
 
       <button id="req" type="submit" value="Submit"> <b> Request </b> </button>
-       </div>
+      
     
     </form>
     </center> 
+  
+    <div id="map"></div>
+
+    <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB0o0oDlGr52EiHRX4R-ATRDUA4hOo1yxg&callback=initMap&libraries=places&v=weekly" 
+            async
+            ></script>
+    
+    
 
 
     
