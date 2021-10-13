@@ -290,7 +290,8 @@ class AutocompleteDirectionsHandler {
    </script>
    
    
-   
+   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
 
 
   </head>
@@ -299,18 +300,17 @@ class AutocompleteDirectionsHandler {
       <center>
     <img src="https://ia601504.us.archive.org/9/items/voug_20210930/VOUG.png" id="logo">
       </center>
-    </div>
     
     
+    <div ng-app="myApp" ng-controller="myCtrl">
    
     
-    <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScBwt8GZIvcTZdeCE82jypQXAWI7BMpbx01iaMAHNddlSui-A/formResponse" target="hidden_iframe" onsubmit="submitted=true" method="POST">
     
     
     <div style="display: none" >
       <input
         id="origin-input"
-        name="entry.2002278628"
+        ng-model="origin"
         class="controls"
         type="text"
         placeholder="From"
@@ -320,7 +320,7 @@ class AutocompleteDirectionsHandler {
     
       <input
         id="destination-input"
-        name="entry.1758080091"
+        ng-model="destination"
         class="controls"
         type="text"
         placeholder="To"
@@ -340,6 +340,7 @@ class AutocompleteDirectionsHandler {
         <input type="radio" name="type" id="changemode-driving" style="display: none"/>
         <label for="changemode-driving" style="display: none" >Driving</label>
     </div>
+     </div>
 
     <div id="map"></div>
 
@@ -353,11 +354,24 @@ class AutocompleteDirectionsHandler {
         <center>
    <!--   <button id=find onclick= "unitMap()"> <b> Find Yourself </b> </button> -->
       <br>
-          <button id=find> <center> <span> <b> <hr>  <hr>  <hr> <b> </span> </center> </button>
-      <button id="req" type="submit" value="Submit"> <b> Request </b> </button>
-    </center>
+      <button id=find> <center> <span> <b> <hr>  <hr>  <hr> <b> </span> </center> </button>
+           
+    <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScBwt8GZIvcTZdeCE82jypQXAWI7BMpbx01iaMAHNddlSui-A/formResponse" target="hidden_iframe" onsubmit="submitted=true" method="POST">
 
+      <button id="req" type="submit" value="Submit"> <b> Request </b> </button>
+    
+           
+     <p name="entry.2002278628"> {{ origin}} </p>
+     <p name="entry.1758080091"> {{ destination}} </p>
+     <script>
+var app = angular.module('myApp', []);
+app.controller('myCtrl', function($scope) {
+    $scope.origin = "";
+    $scope.destination = "";
+});
+</script>
     </form>
+       </center>
        <script type="text/javascript"> var submitted=false;</script>
     <iframe name="hidden_iframe" id="hidden_iframe" style="display:none" onload= "if(submitted){
      window.location ='https://boyoquiz.com/games';}"></iframe>   
