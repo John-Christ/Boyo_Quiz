@@ -229,8 +229,8 @@ class AutocompleteDirectionsHandler {
  //   );
     this.setupPlaceChangedListener(originAutocomplete, "ORIG");
     this.setupPlaceChangedListener(destinationAutocomplete, "DEST");
-    this.map.controls[google.maps.ControlPosition.TOP_LEFT].push(originInput);
-    this.map.controls[google.maps.ControlPosition.TOP_LEFT].push(destinationInput);
+  //  this.map.controls[google.maps.ControlPosition.TOP_LEFT].push(originInput);
+  //  this.map.controls[google.maps.ControlPosition.TOP_LEFT].push(destinationInput);
     this.map.controls[google.maps.ControlPosition.TOP_LEFT].push(modeSelector);
   }
   // Sets a listener on a radio button to change the filter type on Places
@@ -290,7 +290,6 @@ class AutocompleteDirectionsHandler {
    </script>
    
    
-   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
 
 
 
@@ -302,15 +301,16 @@ class AutocompleteDirectionsHandler {
       </center>
     
     
-    <div ng-app="myApp" ng-controller="myCtrl">
    
+     <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScBwt8GZIvcTZdeCE82jypQXAWI7BMpbx01iaMAHNddlSui-A/formResponse" target="hidden_iframe" onsubmit="submitted=true" method="POST">
+
     
     
     
-    <div style="display: none" >
+    <div style="background-color: white" >
       <input
         id="origin-input"
-        ng-model="origin"
+        name="entry.2002278628"
         class="controls"
         type="text"
         placeholder="From"
@@ -320,7 +320,7 @@ class AutocompleteDirectionsHandler {
     
       <input
         id="destination-input"
-        ng-model="destination"
+        name="entry.1758080091"
         class="controls"
         type="text"
         placeholder="To"
@@ -356,20 +356,11 @@ class AutocompleteDirectionsHandler {
       <br>
       <button id=find> <center> <span> <b> <hr>  <hr>  <hr> <b> </span> </center> </button>
            
-    <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScBwt8GZIvcTZdeCE82jypQXAWI7BMpbx01iaMAHNddlSui-A/formResponse" target="hidden_iframe" onsubmit="submitted=true" method="POST">
 
       <button id="req" type="submit" value="Submit"> <b> Request </b> </button>
     
            
-     <p name="entry.2002278628"> {{ origin}} </p>
-     <p name="entry.1758080091"> {{ destination}} </p>
-     <script>
-var app = angular.module('myApp', []);
-app.controller('myCtrl', function($scope) {
-    $scope.origin = "";
-    $scope.destination = "";
-});
-</script>
+    
     </form>
        </center>
        <script type="text/javascript"> var submitted=false;</script>
