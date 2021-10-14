@@ -8,13 +8,21 @@
       /* Always set the map height explicitly to define the size of the div
        * element that contains the map. */
 #map {
-  height: 60%;
+  height: 50%;
   width: 100%;
  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
 }
     
     
+    #form {
+      display: block;
+        width: 100%;
+         height: 45%;
+        margin-top: 0%;
+        background-color: #ff8c00;
+        box-shadow: 10px 10px 5px grey;
+    }
       
       /*my interface*/
       
@@ -31,7 +39,6 @@
         display: block;
         width: 100%;
          height: 15%;
-        background-color: white;
       
       }
     
@@ -339,7 +346,7 @@ class AutocompleteDirectionsHandler {
     </div>
    
     <center>
-    <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScBwt8GZIvcTZdeCE82jypQXAWI7BMpbx01iaMAHNddlSui-A/formResponse" target="hidden_iframe" onsubmit="submitted=true" method="POST">
+    <form id="form" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScBwt8GZIvcTZdeCE82jypQXAWI7BMpbx01iaMAHNddlSui-A/formResponse" target="hidden_iframe" onsubmit="submitted=true" method="POST">
 
    
       <div id="int">
@@ -377,7 +384,7 @@ class AutocompleteDirectionsHandler {
     
     </form>
     </center> 
-    <div id="menu"> </div>
+    <br>
      
     <div id="map"></div>
 
@@ -399,7 +406,7 @@ class AutocompleteDirectionsHandler {
    
     <div style="margin-bottom: 0px;">
      <center>
-       <p style="font-size: 12px; margin-bottom: 5px; color:#dcdcdc; "> <b> Powered by Boyo Lifestyle <b> </p>
+       <p style="font-size: 12px; margin-bottom: 3px; color:#dcdcdc; "> <b> Powered by Boyo Lifestyle <b> </p>
      </center>
       </div>
          
