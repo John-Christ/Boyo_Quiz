@@ -369,7 +369,20 @@ class AutocompleteDirectionsHandler {
         type="text"
         placeholder="To"
       /> 
-       <br>    
+       <br>  
+       
+       
+       <output 
+        id="name" 
+        name="entry.335468136" 
+        />
+       
+       
+      <script>
+        var b = localStorage.getItem("myName");
+        document.getElementById("name").innerHTML=  b;    
+      </script>
+       
       
        <p style= "font-family: Roboto;
   font-size: 20px; color: #fff; "> <b> Price: R0  </b></p>
