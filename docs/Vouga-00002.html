@@ -9,8 +9,7 @@
       /* Always set the map height explicitly to define the size of the div
        * element that contains the map. */
 #map {
-  height: 50%;
-  width: 100%;
+ 
  box-shadow: 15px 0px 55px grey;
 
 
@@ -44,7 +43,7 @@
       #int {
         display: block;
         width: 100%;
-         height: 110px;
+         height: 500px;
         background-color: #ff8c00;
        
       
@@ -401,10 +400,8 @@ class AutocompleteDirectionsHandler {
        <p style= "font-family: Roboto;
   font-size: 20px; color: #fff; "> <b> Price: R0  </b></p>
         
-       </div>  
-    
-      <div id="menu"> 
-       <br>
+      
+       <br><br>
    <!--   <button id=find onclick= "unitMap()"> <b> Find Yourself </b> </button> -->
   
       <button id=find> <center> <span> <b> <hr>  <hr>  <hr> <b> </span> </center> </button>
@@ -417,7 +414,8 @@ class AutocompleteDirectionsHandler {
     </center> 
     <br>
      
-    <div id="map"></div>
+    <div id="map" style=" height: 400px;
+  width: 100%;"></div>
 
     <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB0o0oDlGr52EiHRX4R-ATRDUA4hOo1yxg&callback=initMap&libraries=places&v=weekly" 
