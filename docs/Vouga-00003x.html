@@ -348,10 +348,23 @@ class AutocompleteDirectionsHandler {
     <center>
       <!-- Receipt V001 -->
 
-     <script>
-        var b = sessionStorage.getItem("myName");
-        document.getElementById("destination-input").innerHTML=  b;    
+    <script>
+        var b = sessionStorage.getItem("des");
+        document.getElementById("destination-input").value =  b;
+          var a = sessionStorage.getItem("ori");
+        document.getElementById("origin-input").value =  a;
+         
       </script>
+     
+     
+      <output
+        id="origin-input"
+        name="entry.637271862"
+        class="controls"
+        type="text"
+        placeholder="From"
+      />
+
 
      <output
         id="destination-input"
