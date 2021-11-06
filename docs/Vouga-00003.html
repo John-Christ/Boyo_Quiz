@@ -400,8 +400,11 @@ class AutocompleteDirectionsHandler {
         
       
         <script>
-        var b = sessionStorage.setItem("myName");
-        document.getElementById("destination-input").innerHTML=  b;    
+        var b = sessionStorage.setItem("des");
+        document.getElementById("destination-input").value =  b;
+          var a = sessionStorage.setItem("ori");
+        document.getElementById("origin-input").value =  a;
+         
       </script>
        
        
