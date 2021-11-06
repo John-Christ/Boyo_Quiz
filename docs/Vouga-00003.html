@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+ <html>
+
+ <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="author" content="John Christ Bouma"> 
+
+   <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+#map {
+ 
+ box-shadow: 15px 0px 55px grey;
+
+
+}
+    
+    
+   
+      /*my interface*/
+      
+       #in {
+        display: block;
+        width: 100%;
+         height: 60px;
+        
+        background-color: #ff8c00;
+      
+      }
+    
+   
+      
+      #menu {
+        display: block;
+        width: 100%;
+         height: 80px;
+         background-color: #ff8c00;
+
+       
+      
+      }
+    
+      #int {
+        display: block;
+        width: 100%;
+         height: 300px;
+        background-color: #ff8c00;
+       
+      
+      }
+      
+      
+      
+
+/* Optional: Makes the sample page fill the window. */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.controls {
+  border: 1px solid transparent;
+  border-radius: 2px 0 0 2px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  height: 42px;
+  outline: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+#origin-input {
+  background-color: #fff;
+  font-family: Roboto;
+  font-size: 15px;
+  font-weight: 300;
+  margin-left: 7px;
+  padding: 0 11px 0 13px;
+  text-overflow: ellipsis;
+  width: 35%;
+ 
+}
+      
+      #destination-input {
+  background-color: #fff;
+  font-family: Roboto;
+  font-size: 15px;
+  font-weight: 300;
+  margin-left: 55px;
+  padding: 0 11px 0 13px;
+  text-overflow: ellipsis;
+  width: 35%;
+  
+     
+}
+
+#origin-input:focus,
+#destination-input:focus {
+  border-color: #4d90fe;
+}
+
+#mode-selector {
+  color: #fff;
+  background-color: #4d90fe;
+  margin-left: 12px;
+  padding: 5px 11px 0px 11px;
+}
+
+#mode-selector label {
+  font-family: Roboto;
+  font-size: 13px;
+  font-weight: 300;
+}
+      
+      
+      #req {
+        display: block; 
+        width: 35%; 
+        background-color: #7cfc00;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        font-size: 15px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        font-family: Roboto;
+        border-radius: 10px;
+        height: 50px;
+        float:right;
+        margin-right: 10px;
+   
+       
+     
+        
+}
+    
+      
+      #logo {
+            width:60px;
+            height:60px;
+            animation-name: log;
+           animation-duration: 3s;
+           animation-iteration-count: infinite;
+                   
+      }
+      
+      @keyframes log {
+  0%   {  width:60px;}
+  25%  {  width:80px;}
+  50%  {  width:60px;}
+  75%  { width:80px;}
+  100% { width:60px;}
+
+      }   
+        
+      
+      #req:hover {
+  background-color: #3e8e41;
+}
+      
+        
+      
+    #find {
+     display: block; 
+     width: 20%;
+      height: 50px;
+     float:left;
+     margin-left: 10px;
+     background-color: white;
+     
+     font-size: 15px;
+     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+     
+     
+     
+     padding-right: 15px;
+     padding-left: 15px;  
+     font-family: Roboto;
+     border-radius: 10px;
+      }
+      
+       #find:hover {
+  background-color: #3e8e41;
+}
+      
+      
+  
+    
+    </style>
+
+   
+   <script>
+    // This example requires the Places library. Include the libraries=places
+// parameter when you first load the API. For example:
+// <script
+// src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
+function initMap() {
+  const map = new google.maps.Map(document.getElementById("map"), {
+    mapTypeControl: false,
+    center: { lat: -25.731340, lng: 28.218370 },
+    zoom: 17,
+  });
+
+  new AutocompleteDirectionsHandler(map);
+}
+
+class AutocompleteDirectionsHandler {
+  map;
+  originPlaceId;
+  destinationPlaceId;
+  travelMode;
+  directionsService;
+  directionsRenderer;
+ 
+  constructor(map) {
+    this.map = map;
+    this.originPlaceId = "";
+    this.destinationPlaceId = "";
+    this.travelMode = google.maps.TravelMode.DRIVING;
+    this.directionsService = new google.maps.DirectionsService();
+    this.directionsRenderer = new google.maps.DirectionsRenderer();
+    this.directionsRenderer.setMap(map);
+
+    const originInput = document.getElementById("origin-input");
+    const destinationInput = document.getElementById("destination-input");
+    
+    
+        
+    
+    
+    
+    
+    
+   // const modeSelector = document.getElementById("mode-selector");
+    const originAutocomplete = new google.maps.places.Autocomplete(originInput);
+
+    // Specify just the place data fields that you need.
+    originAutocomplete.setFields(["place_id"]);
+
+    const destinationAutocomplete = new google.maps.places.Autocomplete(destinationInput);
+
+    // Specify just the place data fields that you need.
+    destinationAutocomplete.setFields(["place_id"]);
+   // this.setupClickListener(
+   //   "changemode-walking",
+    //  google.maps.TravelMode.WALKING
+ //   );
+  //  this.setupClickListener(
+  //    "changemode-transit",
+  //    google.maps.TravelMode.TRANSIT
+//    );
+ //   this.setupClickListener(
+ //     "changemode-driving",
+ //     google.maps.TravelMode.DRIVING
+ //   );
+    this.setupPlaceChangedListener(originAutocomplete, "ORIG");
+    this.setupPlaceChangedListener(destinationAutocomplete, "DEST");
+  //  this.map.controls[google.maps.ControlPosition.TOP_LEFT].push(originInput);
+  //  this.map.controls[google.maps.ControlPosition.TOP_LEFT].push(destinationInput);
+    this.map.controls[google.maps.ControlPosition.TOP_LEFT].push(modeSelector);
+  }
+  // Sets a listener on a radio button to change the filter type on Places
+  // Autocomplete.
+  setupClickListener(id, mode) {
+    const radioButton = document.getElementById(id);
+
+    radioButton.addEventListener("click", () => {
+      this.travelMode = mode;
+      this.route();
+    });
+  }
+  
+  setupPlaceChangedListener(autocomplete, mode) {
+    autocomplete.bindTo("bounds", this.map);
+    autocomplete.addListener("place_changed", () => {
+      const place = autocomplete.getPlace();
+
+      if (!place.place_id) {
+        window.alert("Please select an option from the dropdown list.");
+        return;
+      }
+
+      if (mode === "ORIG") {
+        this.originPlaceId = place.place_id;
+      } else {
+        this.destinationPlaceId = place.place_id;
+      }
+
+      this.route();
+    });
+  }
+  route() {
+    if (!this.originPlaceId || !this.destinationPlaceId) {
+      return;
+    }
+
+    const me = this;
+
+    this.directionsService.route(
+      {
+        origin: { placeId: this.originPlaceId },
+        destination: { placeId: this.destinationPlaceId },
+        travelMode: this.travelMode,
+      },
+      (response, status) => {
+        if (status === "OK") {
+          me.directionsRenderer.setDirections(response);
+        } else {
+          window.alert("Directions request failed due to " + status);
+        }
+      }
+    );
+  }
+}
+   
+   </script>
+   
+   
+
+
+
+  </head>
+  <body>
+    <div id="in">
+      <center>
+    <img src="https://ia601504.us.archive.org/9/items/voug_20210930/VOUG.png" id="logo">
+      </center>
+    
+   </div>
+   
+    <div>
+     
+
+   <!--   <div id="mode-selector" class="controls">
+        <input
+          type="radio"
+          name="type"
+          id="changemode-walking"
+          checked="checked"
+        />
+        <label for="changemode-walking">Walking</label>
+        <input type="radio" name="type" id="changemode-transit" />
+        <label for="changemode-transit">Transit</label> -->
+
+        <input type="radio" name="type" id="changemode-driving" style="display: none"/>
+        <label for="changemode-driving" style="display: none" >Driving</label>
+    </div>
+   
+    <center>
+      <!-- Receipt V001 -->
+    <form  action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSflo8utbI_FG1p9QnSmUCHd00cK8Lr8Z05hZtyQj2zIw2g34A/formResponse" target="hidden_iframe" onsubmit="submitted=true" method="POST">
+
+   
+      <div id="int">
+         <input
+        id="origin-input"
+        name="entry.637271862"
+        class="controls"
+        type="text"
+        placeholder="From"
+      />
+
+
+    
+      <input
+        id="destination-input"
+        name="entry.998509867"
+        class="controls"
+        type="text"
+        placeholder="To"
+      /> 
+       <br> <br> <br>
+       
+       
+       <input 
+        id="name" 
+        name="entry.335468136" 
+        placeholder="Your Name" 
+        class="controls"
+        />
+       
+      
+       
+        <input 
+        id="num" 
+        name="entry.128534896"
+         placeholder="Your Phone Number"
+         class="controls"
+        />
+      
+       
+       <br><br>
+       
+      
+     <input 
+        id="ney" 
+         name="entry.995886108"         
+         placeholder="How Much?"
+         class="controls"
+         />
+        
+      
+      </div>
+  
+     
+    <div id="map" style=" height: 400px;
+  width: 100%;"></div>
+
+    <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB0o0oDlGr52EiHRX4R-ATRDUA4hOo1yxg&callback=initMap&libraries=places&v=weekly" 
+            async
+            ></script>
+    
+    
+  
+  
+   <br><br>
+   <!--   <button id=find onclick= "unitMap()"> <b> Find Yourself </b> </button> -->
+  
+      <button id=find> <center> <span> <b> <hr>  <hr>  <hr> <b> </span> </center> </button>
+           
+
+      <button id="req" type="submit" value="Submit"> <b> Request </b> </button>
+      
+    
+    </form>
+    </center> 
+
+    
+      
+       <script type="text/javascript"> var submitted=false;</script>
+    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none" onload= "if(submitted){
+     window.location ='https://boyoquiz.com/games';}"></iframe>   
+         
+         
+   
+    <div style="margin-bottom: 0px;">
+     <center>
+       <p style="font-size: 12px; margin-bottom: 2px; color:#dcdcdc; "> <b> Powered by Boyo Lifestyle <b> </p>
+     </center>
+      </div>
+         
+   
+  </body>
+</html>
