@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+ <html>
+
+ <head>
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="author" content="John Christ Bouma">
+
+   </head>
+   <body>
+     <h2> <b>Welcome to Vouga<b></h2>
+     
+     <form action="map1.html" method="POST">
+      
+       
+       <input type="text" id="name"/> 
+       <input type="tel" id="phone"/>
+       
+      
+       <input type="submit" onclick="setLocal ()" id="send"/>
+       
+       </form>
+       
+       
+       <script>
+        function setLocal () {
+
+   const name = document.getElementById("name").value;
+   const phone = document.getElementById("phone").value;      
+   localStorage.setItem("NAME", name);
+   localStorage.setItem("NUMBER", phone);
+
+   return;
+
+   window.location.assign("https://script.google.com/macros/s/AKfycbxwMarlWXAsyYY8Z1U_dQWVsAgDUTyBs7QyJx3_8pAsFOW6WWRnPKy687MMYRfsVmiVeg/exec")
+ }
+       
+       </script>
+       
+     
+     
+     
+   </body>
+</html>
