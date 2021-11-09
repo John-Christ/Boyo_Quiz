@@ -388,9 +388,36 @@ class AutocompleteDirectionsHandler {
     
   </head>
   <body>
-    <a href="Vouga-00002.html">
+    <a onclick="AddRow()">
     <img src="https://ia601504.us.archive.org/9/items/voug_20210930/Copy%20of%20VOUG.png" id="loader">
     </a>
+    
+    <script>
+    function AddRow()
+    {
+      const name = localStorage.getItem('NAME');
+      const num = localStorage.getItem('NUMBER');
+      
+      if (name==""|| num=="") {
+
+       window.location.assign("localogin.html")
+
+      }
+
+     
+
+      else {
+    
+      window.location.assign("Vouga-00003.html")
+     }
+    }
+    
+    </script>
+    
+    
+    
+    
+    
    <p id=not> <b>Press the logo! <b></p>
 
     <div id="myDiv" class="animate-bottom">
