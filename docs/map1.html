@@ -15,7 +15,15 @@
     <br>
     <center>
     <div>
-        
+       <p id="user"> </p> 
+      <script>
+document.addEventListener('click', () => {
+  const name = localStorage.getItem('NAME');
+  document.getElementById('user').innerHTML = name;
+})
+      </script>
+      
+      
        <iframe src="https://script.google.com/macros/s/AKfycbxwMarlWXAsyYY8Z1U_dQWVsAgDUTyBs7QyJx3_8pAsFOW6WWRnPKy687MMYRfsVmiVeg/exec" frameborder="0" width="100%" height="590px" ></iframe> 
        </div>
       </center>
