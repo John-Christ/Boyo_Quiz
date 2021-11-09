@@ -408,14 +408,35 @@ class AutocompleteDirectionsHandler {
    <!--   <button id=find onclick= "unitMap()"> <b> Find Yourself </b> </button> -->
       <br>
           <button id=find> <center> <span> <b> <hr>  <hr>  <hr> <b> </span> </center> </button>
-      <button id="req" type="submit"> <b> Request </b> </button>
+      <button id="req" type="submit" onclick="AddRow()"> <b> Request </b> </button>
     </center>    
     </div> 
     </form>
      <center>
        <p style="font-size: 12px; margin-bottom: 10px; color:#dcdcdc; "> <b> Powered by Boyo Lifestyle <b> </p>
      </center>
-   
+         
+         <script>
+   function AddRow()
+    {
+      var origin = document.getElementById("origin-input").value;
+      var destination = document.getElementById("destination-input").value;
+      
+
+     
+      if (origin==""|| destination=="") {
+
+         alert("Your Request is Incomplet");
+      }
+
+     
+
+      else {
+     
+      window.location.assign("https://boyoquiz.com/games")
+     }
+    }
+       </script>
          
    
   </body>
