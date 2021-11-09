@@ -372,7 +372,7 @@ class AutocompleteDirectionsHandler {
        
        
        <input 
-        id="name" 
+        id="namee" 
         name="entry.335468136" 
         placeholder="Your Name" 
         class="controls"
@@ -401,11 +401,10 @@ class AutocompleteDirectionsHandler {
         
       
         <script>
-        var b = sessionStorage.setItem("des");
-        document.getElementById("destination-input").value =  b;
-          var a = sessionStorage.setItem("ori");
-        document.getElementById("origin-input").value =  a;
-         
+       document.addEventListener('click', () => {
+  const name = localStorage.getItem('NAME');
+  document.getElementById('namee').innerHTML = name;
+})       
       </script>
        
        
