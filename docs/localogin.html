@@ -7,20 +7,59 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="author" content="John Christ Bouma">
 
+  <style>
+   #cor {
+   display: block;
+   margin-top: 200px;
+   
+   
+   
+   }
+  
+  </style>
+  
+  
+  
    </head>
    <body>
      <h2> <b>Welcome to Vouga<b></h2>
-     
-     <div>
+     <center>
+     <div id=cor>
       
        
-       <input type="text" id="name"/> 
-       <input type="tel" id="phone"/>
+       <input type="text" id="name" placeholder="Your Name"/> <br>
+       <input type="tel" id="phone" placeholder="Your Phone Number"/> <br>
        
       
-      <button  onclick="setLocal ()" id="send"> <a href="Vouga-00003.html"> Continue </a> </button>
+      <button  onclick="setLocal ()" id="send"> <span onclick="check()"> Continue </span></button>
        
        </div>
+      
+      
+       <script>
+   function check()
+    {
+       const nom = document.getElementById("name").value;
+    const tel = document.getElementById("phone").value;
+      
+
+     
+      if (nom==""|| tel=="") {
+
+        
+      
+        alert("Please, complet all fields!");
+      }
+
+     
+
+      else {
+     
+      window.location.assign("Vouga-00003.html")
+     }
+    }
+       </script>
+      
        
        
        <script>
@@ -39,7 +78,7 @@
        </script>
        
      
-     
+      </center> 
      
    </body>
 </html>
