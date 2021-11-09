@@ -1,51 +1,35 @@
 <!DOCTYPE html>
- <html>
-
- <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html>
+  <head>
+    <title>Boyo GPS</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="author" content="John Christ Bouma"> 
-
-   <style>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    
+    
+    <style>
       /* Always set the map height explicitly to define the size of the div
        * element that contains the map. */
 #map {
  
- box-shadow: 15px 0px 55px grey;
-
-
 }
-    
-    
-   
+      
       /*my interface*/
       
-       #in {
+       #inter1 {
         display: block;
         width: 100%;
-         height: 60px;
-        
+         height: 10%;
+        margin-top: 0%;
         background-color: #ff8c00;
       
       }
-    
-   
       
-      #menu {
+      #inter {
         display: block;
         width: 100%;
-         height: 80px;
-         background-color: #ff8c00;
-
-       
-      
-      }
-    
-      #int {
-        display: block;
-        width: 100%;
-         height: 250px;
+         height: 25%;
         background-color: #ff8c00;
-       
       
       }
       
@@ -61,6 +45,7 @@ body {
 }
 
 .controls {
+  margin-top: 10px;
   border: 1px solid transparent;
   border-radius: 2px 0 0 2px;
   box-sizing: border-box;
@@ -75,11 +60,10 @@ body {
   font-family: Roboto;
   font-size: 15px;
   font-weight: 300;
-  margin-left: 7px;
+  margin-left: 12px;
   padding: 0 11px 0 13px;
   text-overflow: ellipsis;
   width: 35%;
- 
 }
       
       #destination-input {
@@ -87,12 +71,10 @@ body {
   font-family: Roboto;
   font-size: 15px;
   font-weight: 300;
-  margin-left: 55px;
+  margin-left: 48px;
   padding: 0 11px 0 13px;
   text-overflow: ellipsis;
   width: 35%;
-  
-     
 }
 
 #origin-input:focus,
@@ -118,7 +100,7 @@ body {
         display: block; 
         width: 35%; 
         background-color: #7cfc00;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        border: 1px solid white;
         font-size: 15px;
         padding-top: 15px;
         padding-bottom: 15px;
@@ -127,9 +109,6 @@ body {
         height: 50px;
         float:right;
         margin-right: 10px;
-   
-       
-     
         
 }
     
@@ -166,10 +145,8 @@ body {
      float:left;
      margin-left: 10px;
      background-color: white;
-     
+     border: 1px solid transparent;
      font-size: 15px;
-     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-     
      
      
      padding-right: 15px;
@@ -187,8 +164,12 @@ body {
     
     </style>
 
-   
-   <script>
+    
+    
+    
+    
+    
+    <script>
     // This example requires the Places library. Include the libraries=places
 // parameter when you first load the API. For example:
 // <script
@@ -254,8 +235,8 @@ class AutocompleteDirectionsHandler {
  //   );
     this.setupPlaceChangedListener(originAutocomplete, "ORIG");
     this.setupPlaceChangedListener(destinationAutocomplete, "DEST");
-  //  this.map.controls[google.maps.ControlPosition.TOP_LEFT].push(originInput);
-  //  this.map.controls[google.maps.ControlPosition.TOP_LEFT].push(destinationInput);
+    this.map.controls[google.maps.ControlPosition.TOP_LEFT].push(originInput);
+    this.map.controls[google.maps.ControlPosition.TOP_LEFT].push(destinationInput);
     this.map.controls[google.maps.ControlPosition.TOP_LEFT].push(modeSelector);
   }
   // Sets a listener on a radio button to change the filter type on Places
@@ -311,46 +292,30 @@ class AutocompleteDirectionsHandler {
     );
   }
 }
-   
-   </script>
-   
-   
-
-
-
+     
+      
+    </script>
+    
+    
+    
   </head>
   <body>
-    <div id="in">
+
+    
+    
+    <div id=inter1>
       <center>
     <img src="https://ia601504.us.archive.org/9/items/voug_20210930/VOUG.png" id="logo">
       </center>
-    
-   </div>
-   
-    <div>
-     
-
-   <!--   <div id="mode-selector" class="controls">
-        <input
-          type="radio"
-          name="type"
-          id="changemode-walking"
-          checked="checked"
-        />
-        <label for="changemode-walking">Walking</label>
-        <input type="radio" name="type" id="changemode-transit" />
-        <label for="changemode-transit">Transit</label> -->
-
-        <input type="radio" name="type" id="changemode-driving" style="display: none"/>
-        <label for="changemode-driving" style="display: none" >Driving</label>
     </div>
-   
-    <center>
-      <!-- Receipt V001 -->
+    
+     <!-- Receipt V001 -->
     <form  action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSflo8utbI_FG1p9QnSmUCHd00cK8Lr8Z05hZtyQj2zIw2g34A/formResponse" target="hidden_iframe" onsubmit="submitted=true" method="POST">
 
-   
-      <div id="int">
+    
+    
+    <div style="display: none" >
+     <div id="int">
          <input
         id="origin-input"
         name="entry.637271862"
@@ -368,24 +333,47 @@ class AutocompleteDirectionsHandler {
         type="text"
         placeholder="To"
       /> 
-       <br> <br> <br>
-       
-       
+
+   <!--   <div id="mode-selector" class="controls">
+        <input
+          type="radio"
+          name="type"
+          id="changemode-walking"
+          checked="checked"
+        />
+        <label for="changemode-walking">Walking</label>
+        <input type="radio" name="type" id="changemode-transit" />
+        <label for="changemode-transit">Transit</label> -->
+
+        <input type="radio" name="type" id="changemode-driving" style="display: none"/>
+        <label for="changemode-driving" style="display: none" >Driving</label>
+    </div>
+
+    <div id="map" style=" height: 600px;
+  width: 100%; "></div>
+
+    <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB0o0oDlGr52EiHRX4R-ATRDUA4hOo1yxg&callback=initMap&libraries=places&v=weekly" 
+            async
+            ></script>
+    
+     <div style="dipslay: none;">
        <input 
         id="namee" 
         name="entry.335468136" 
         placeholder="Your Name" 
         class="controls"
-        value="namee"
+         value="Joe"
         />
        
       
        
         <input 
-        id="num" 
+        id="phone" 
         name="entry.128534896"
          placeholder="Your Phone Number"
          class="controls"
+         value="0712495653"
         />
       
        
@@ -395,63 +383,43 @@ class AutocompleteDirectionsHandler {
      <input 
         id="ney" 
          name="entry.995886108"         
-         placeholder="How Much"  
+         placeholder="How Much?"
          class="controls"
+           value="20" 
          />
-
         
       
-        <script>
-       document.addEventListener('click', () => {
-  const name = localStorage.getItem('NAME');
-  document.getElementById('namee').value = name;
-})       
-      </script>
-       
-       
-       
-      </div>
-  
+     </div>
      
-    <div id="map" style=" height: 300px;
-  width: 100%;"></div>
+     <script>
+      document.addEventListener('click', () => {
+  const name = localStorage.getItem('NAME');
+  const num = localStorage.getItem('NUMBER')
+    
 
-    <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB0o0oDlGr52EiHRX4R-ATRDUA4hOo1yxg&callback=initMap&libraries=places&v=weekly" 
-            async
-            ></script>
+  document.getElementById('namee').innerHTML = name;
+  document.getElementById('phone').innerHTML = num;
+
+})
+
+     </script>
+     
     
-    
-  
-  
-   <br>
+    <div id= inter>
+        <center>
    <!--   <button id=find onclick= "unitMap()"> <b> Find Yourself </b> </button> -->
-  <div>
-      <button id=find> <center> <span> <b> <hr>  <hr>  <hr> <b> </span> </center> </button>
-           
-
-      <button id="req" type="submit" > <b> Request </b> </button>
-      
-    </div>
-       
-       <br><br>
+      <br>
+          <button id=find> <center> <span> <b> <hr>  <hr>  <hr> <b> </span> </center> </button>
+      <button id="req" type="submit"> <b> Request </b> </button>
+    </center>
     </form>
-    </center> 
-
-     <br><br>
-      
-       <script type="text/javascript"> var submitted=false;</script>
-    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none" onload= "if(submitted){
-     window.location ='Vouga-00003x.html';}"></iframe>   
-         
+    </div> 
+    
+     <center>
+       <p style="font-size: 12px; margin-bottom: 10px; color:#dcdcdc; "> <b> Powered by Boyo Lifestyle <b> </p>
+     </center>
+   
          
    
-    <div style="margin-bottom: 0px;">
-     <center>
-       <p style="font-size: 12px; margin-bottom: 2px; color:#dcdcdc; "> <b> Powered by Boyo Lifestyle <b> </p>
-     </center>
-      </div>
-         
-  
   </body>
 </html>
