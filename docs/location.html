@@ -1,0 +1,37 @@
+<form id="contact" action="" method="post" align="center">
+
+    <fieldset>
+      <input placeholder="Your Address" id="address" type="text" tabindex="1" required autofocus>
+    </fieldset>
+    <fieldset>
+      <button name="submit" type="button" id="contact-submit" onclick="myLoc"> Location</button>
+    </fieldset>
+
+
+    <script src="https://www.googleapis.com/geolocation/v1/geolocate?key=AIzaSyA6LUgd0sqxV0veDhuTcUJUXyZQJE3pTqE"></script>
+        <script type="text/javascript">
+           function myLoc(){
+
+            function getGeoLocation() {
+                if (navigator.geolocation) {
+                    navigator.geolocation.getCurrentPosition(showPosition);
+                } else {
+                    document.getElementById("address").value = "Geolocation is not supported by this browser.";
+                }
+            }
+
+            function showPosition(position) {
+                var lat = position.coords.latitude;
+                var lang = position.coords.longitude;
+                var url = "http://maps.googleapis.com/maps/api/geocode/json?latlng=" + lat + "," + lang + "&sensor=true";
+
+                $.getJSON(url, function (data) {
+                        var address = data.results[0].formatted_address;
+                        document.getElementById("address").value = address;
+
+                });
+            }               
+}    
+        </script>
+
+</form>
