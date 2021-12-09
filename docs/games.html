@@ -99,13 +99,30 @@ body {
 
   </head>
   <body>
-
+    <div>
     <button style="margin-left: 10px;" onclick="getLocation()">Find Your Location</button>
     <br>
     <h5 style="margin-left: 10px;">click the button above.Then copy and paste your location details generated<br>
     into the input next to get the address.</h5><br>
 
 <output style="margin-left: 10px; display: block; background-color:lightyellow;"  id="demo"></output><br><br>
+
+
+
+
+   
+      <input id="latlng" type="text" placeholder="Paste here eg. -25.731340, 28.218370 " />
+      <input id="submit" type="button" value="Get your address" />
+      <output id="addr"></output>
+    </div>
+    <div id="map"></div>
+    
+    <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA6LUgd0sqxV0veDhuTcUJUXyZQJE3pTqE&callback=initMap&v=weekly"async></script>
+    </script>
+
+   
+
 
 <script>
 var x = document.getElementById("demo");
@@ -128,22 +145,6 @@ function showPosition(position) {
  ", " + position.coords.longitude;
 }
 </script>
-
-
-    <div id="floating-panel">
-      <input id="latlng" type="text" placeholder="Paste here eg. -25.731340, 28.218370 " />
-      <input id="submit" type="button" value="Get your address" />
-    </div>
-    <div id="map"></div>
-    <output id="addr"></output>
-    <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA6LUgd0sqxV0veDhuTcUJUXyZQJE3pTqE&callback=initMap&v=weekly"async></script>
-    </script>
-
-   
-
-
-
     
   </body>
 
