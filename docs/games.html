@@ -100,12 +100,7 @@ body {
   </head>
   <body>
 <br><br>
-    <button style="margin-left: 10px;" onclick="getLocation()">Find Your Location</button>
-    <br>
-    <h5 style="margin-left: 10px;">click the button above.Then copy and paste your location details generated<br>
-    into the input next to get the address.</h5><br>
-
-<output style="margin-left: 10px; display: block; background-color:lightyellow;"  id="demo"></output><br><br>
+   
 
 <script>
 var x = document.getElementById("demo");
@@ -134,6 +129,12 @@ function showPosition(position) {
       <input id="latlng" type="text" placeholder="Paste here eg. -25.731340, 28.218370 " />
       <input id="submit" type="button" value="Get your address" />
     </div>
+     <button style="margin-left: 10px;" onclick="getLocation()">Find Your Location</button>
+    <br>
+    <h5 style="margin-left: 10px;">click the button above.Then copy and paste your location details generated<br>
+    into the input next to get the address.</h5><br>
+
+<output style="margin-left: 10px; display: block; background-color:lightyellow;"  id="demo"></output><br><br>
     <div id="map"></div>
     <output id="addr"></output>
     <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
