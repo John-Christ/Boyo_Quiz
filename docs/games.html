@@ -1,32 +1,150 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Form</title>
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="author" content="John Christ Bouma"> 
-    
-    
-   
-  </head>
-  <body onload="myFunction()">
-   
-    <p> <b id="wait" style="top:10px;"> Please wait...</b></p>
-    
-     <script>
-    function myFunction() {
-  myVar = setTimeout(showPage, 3000);
+    <title>Reverse Geocoding</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+    <script>
+    function initMap() {
+  const map = new google.maps.Map(document.getElementById("map"), {
+    zoom: 17,
+    center: { lat: -25.731340, lng: 28.218370 },
+  });
+  var geocoder = new google.maps.Geocoder();
+  var infowindow = new google.maps.InfoWindow();
+
+  document.getElementById("submit").addEventListener("click", () => {
+    geocodeLatLng(geocoder, map, infowindow);
+  });
 }
 
-function showPage() {
-  document.getElementById("wait").style.display = "none";
-  
+function geocodeLatLng(geocoder, map, infowindow) {
+  var input = document.getElementById("latlng").value;
+  var latlngStr = input.split(",", 2);
+  var latlng = {
+    lat: parseFloat(latlngStr[0]),
+    lng: parseFloat(latlngStr[1]),
+  };
+
+  geocoder
+    .geocode({ location: latlng })
+    .then((response) => {
+      if (response.results[0]) {
+        map.setZoom(17);
+
+        var marker = new google.maps.Marker({
+          position: latlng,
+          map: map,
+        });
+
+        infowindow.setContent(response.results[0].formatted_address);
+        infowindow.open(map, marker);
+        document.getElementById("addr").innerHTML = response.results[0].formatted_address;
+      } else {
+        window.alert("No results found");
+      }
+    })
+    .catch((e) => window.alert("Geocoder failed due to: " + e));
 }
-    </script> 
+
+
+    </script>
+
+    <style>
+
+        /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+#map {
+  height: 100%;
+}
+
+/* Optional: Makes the sample page fill the window. */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#floating-panel {
+  position: absolute;
+  top: 10px;
+  left: 25%;
+  z-index: 5;
+  background-color: #fff;
+  padding: 5px;
+  border: 1px solid #999;
+  text-align: center;
+  font-family: "Roboto", "sans-serif";
+  line-height: 30px;
+  padding-left: 10px;
+}
+
+#floating-panel {
+  position: absolute;
+  top: 5px;
+  left: 50%;
+  margin-left: -180px;
+  width: 350px;
+  z-index: 5;
+  background-color: #fff;
+  padding: 5px;
+  border: 1px solid #999;
+}
+
+#latlng {
+  width: 225px;
+}
+    </style>
+
+  </head>
+  <body>
+
+    <button style="margin-left: 10px;" onclick="getLocation()">Find Your Location</button>
+    <br>
+    <h5 style="margin-left: 10px;">click the button above.Then copy and paste your location details generated<br>
+    into the input next to get the address.</h5><br>
+
+<output style="margin-left: 10px; display: block; background-color:lightyellow;"  id="demo"></output><br><br>
+
+<script>
+var x = document.getElementById("demo");
+
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+    
+  } else { 
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+
   
- <iframe src="https://script.google.com/macros/s/AKfycbxm68_u1UbADo__5hpRowcbIg2XPsCzk534Bz434-5Qm-LYIvk9b0_KIe_h0g7Pwb5DOQ/exec" frameborder="0" width="100%" height="500px" ></iframe> 
    
-    
-    
+  }
+
+
+function showPosition(position) {
+  x.innerHTML = position.coords.latitude + 
+ ", " + position.coords.longitude;
+}
+</script>
+
+
+    <div id="floating-panel">
+      <input id="latlng" type="text" placeholder="Paste here eg. -25.731340, 28.218370 " />
+      <input id="submit" type="button" value="Get your address" />
+    </div>
+    <div id="map"></div>
+    <output id="addr"></output>
+    <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA6LUgd0sqxV0veDhuTcUJUXyZQJE3pTqE&callback=initMap&v=weekly"async></script>
+    </script>
+
    
+
+
+
+    
   </body>
+
 </html>
