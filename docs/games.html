@@ -1,38 +1,113 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Vouga</title>
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="author" content="John Christ Bouma"> 
-    
-    
-   
-  </head>
-  <body onload="myFunction()">
-   
-    <p> <b id="wait" style="top:10px;" onclick="change()"> Please wait...</b></p>
-    
-     <script>
-    function myFunction() {
-  myVar = setTimeout(showPage, 3000);
+    <title>Geolocation</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+    <script src="./index.js"></script>
+
+   <style>
+    /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+
+
+/* Optional: Makes the sample page fill the window. */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
-function showPage() {
-  document.getElementById("wait").style.display = "none";
-  
+.custom-map-control-button {
+  background-color: #fff;
+  border: 0;
+  border-radius: 2px;
+  box-shadow: 0 1px 4px -1px rgba(0, 0, 0, 0.3);
+  margin: 10px;
+  padding: 0 0.5em;
+  font: 400 18px Roboto, Arial, sans-serif;
+  overflow: hidden;
+  height: 40px;
+  cursor: pointer;
 }
-    </script> 
-  
- <iframe id="client" src="https://script.google.com/macros/s/AKfycbxm68_u1UbADo__5hpRowcbIg2XPsCzk534Bz434-5Qm-LYIvk9b0_KIe_h0g7Pwb5DOQ/exec" frameborder="0" width="100%" height="1280px" ></iframe> 
-   
-   <iframe id="driver" src="https://script.google.com/macros/s/AKfycbyiWV1YeZowV4woAyZ4yIqalSpfDDA14dOkRaSRrSXaUkSIqBjr4vzXtllMWbLWYI2e/exec" frameborder="0" width="100%" height="1280px" style="display:none;" ></iframe> 
-  
-    <script>
-      function change() {
-      document.getElementById("client").style.display= "none";
-      document.getElementById("driver").style.display= "block";
-      }
-    </script>
-   
+.custom-map-control-button:hover {
+  background: #ebebeb;
+}
+
+   </style>
+
+  </head>
+  <body>
+    <div id="map" style="height: 100%;"></div>
+
+    <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA6LUgd0sqxV0veDhuTcUJUXyZQJE3pTqE&callback=initMap&v=weekly"
+      async
+    ></script>
+
+   <script>
+  // Note: This example requires that you consent to location sharing when
+// prompted by your browser. If you see the error "The Geolocation service
+// failed.", it means you probably did not give permission for the browser to
+// locate you.
+let map, infoWindow;
+
+function initMap() {
+  map = new google.maps.Map(document.getElementById("map"), {
+    center: { lat: -34.397, lng: 150.644 },
+    zoom: 17,
+  });
+  infoWindow = new google.maps.InfoWindow();
+
+  const locationButton = document.createElement("button");
+
+  locationButton.textContent = "Pan to Current Location";
+  locationButton.classList.add("custom-map-control-button");
+  map.controls[google.maps.ControlPosition.TOP_CENTER].push(locationButton);
+  locationButton.addEventListener("click", () => {
+    // Try HTML5 geolocation.
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(
+        (position) => {
+          const pos = {
+            lat: position.coords.latitude,
+            lng: position.coords.longitude,
+          };
+
+          infoWindow.setPosition(pos);
+          infoWindow.setContent("Location found.");
+          infoWindow.open(map);
+          map.setCenter(pos);
+        },
+        () => {
+          handleLocationError(true, infoWindow, map.getCenter());
+        }
+      );
+    } else {
+      // Browser doesn't support Geolocation
+      handleLocationError(false, infoWindow, map.getCenter());
+    }
+  });
+}
+
+function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+  infoWindow.setPosition(pos);
+  infoWindow.setContent(
+    browserHasGeolocation
+      ? "Error: The Geolocation service failed."
+      : "Error: Your browser doesn't support geolocation."
+  );
+  infoWindow.open(map);
+}
+
+
+ 
+</script>
+
+
+
+
   </body>
 </html>
