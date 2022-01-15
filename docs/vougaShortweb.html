@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <style>
+        #body {
+           background-image: url("https://ia601504.us.archive.org/9/items/voug_20210930/Copy%20of%20VOUG.png");
+           height: 500px;
+        }
+
+
+        #loader {
+  
+
+  
+ 
+  width: 120px;
+  height: 120px;
+
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+   border-right: 16px solid green;
+  border-bottom: 16px solid red;
+  border-left: 16px solid pink;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+ 
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+      
+      
+      #loader:hover {
+        animation: spen 1s linear infinite;
+      }
+      
+      
+      @keyframes spen {
+         0% {  width: 120px; height: 120px; }
+  100% { width: 90px; height: 90px; }
+}
+
+
+#logo {
+          
+            animation-name: log;
+           animation-duration: 3s;
+           animation-iteration-count: infinite;
+
+}
+
+    </style>
+
+    </head>
+
+    <body >
+        <a href="https://play.google.com/store/apps/details?id=com.ex.vouga">
+   <div id="body">
+        <center>
+       <b> <h1 id="logo">Click the animated circle below to continue...</h1></b>
+        <br><br><br><br><br><br>
+        
+        <img src="https://ia601504.us.archive.org/9/items/voug_20210930/Copy%20of%20VOUG.png" id="loader" >
+        </div>
+        </a>
+   </center>
+    </body>
+</html>
