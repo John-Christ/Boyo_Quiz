@@ -6,15 +6,36 @@
         
     </head>
     <body>
-      <div style="margin-top: 0px; float: right;">
+      <div style="margin-top: 0px; float: right; ">
             <br>
-            <select style="background-color: azure; height: 40px; margin-right: 10px;" >
-                <option> <a href=""> <b> Enregistrement d'une Naissance </b> </a> </option>
-               <option > <a href=""> <b>Recherche d'une Naissance</b> </a></option>
-               <option> <a href=""> <b>Se Deconecter</b> </a> </option>
-            </select>
-        </div>
-        <br><br><br>  
+            <button id="option" onclick="Open()" style="background-color: azure; width:250px; margin-right: 10px;" ><b> Service</b></button>
+
+            <button id="fermer" onclick="Close()" style="background-color: azure; width:250px; margin-right: 10px; display:none;"><b> Fermer</b></button>
+            
+
+            <div id="navigue"   style="display:none; background-color: azure; width:250px; margin-right: 10px;">
+               
+                
+               <hr>
+               <p > <a href="https://script.google.com/macros/s/AKfycbza6XiCGOVsI3uquzcxxDkANg1CAck-vNy8fmOaVsh_ugvgPvIYoLAsLxYgGzMV2VYT/exec"> <b>Rechercher une Naissance</b> </a></p>
+               <hr>
+
+            <script>
+                 function Open(){
+    document.getElementById("navigue").style.display="block";
+    document.getElementById("fermer").style.display="block";
+    document.getElementById("option").style.display="none";
+  }
+
+
+  function Close(){
+
+   document.getElementById("option").style.display = "block";
+    document.getElementById("navigue").style.display = "none";
+    document.getElementById("fermer").style.display="none";  
+  }
+            </script>
+            </div> 
     
       <img src="https://ia801508.us.archive.org/19/items/bis-black-ground/logo%20bis.jpg" style="width: 250px; height: 120px; float: left;">
       <br><br>
