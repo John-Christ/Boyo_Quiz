@@ -1,38 +1,60 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Vouga</title>
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="author" content="John Christ Bouma"> 
-    
-    
-   
-  </head>
-  <body onload="myFunction()">
-   
-    <p> <b id="wait" style="top:10px;" onclick="change()"> Please wait...</b></p>
-    
-     <script>
-    function myFunction() {
-  myVar = setTimeout(showPage, 3000);
-}
+    <head>
 
-function showPage() {
-  document.getElementById("wait").style.display = "none";
-  
-}
-    </script> 
-  
- <iframe id="client" src="https://script.google.com/macros/s/AKfycbxm68_u1UbADo__5hpRowcbIg2XPsCzk534Bz434-5Qm-LYIvk9b0_KIe_h0g7Pwb5DOQ/exec" frameborder="0" width="100%" height="1280px" ></iframe> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
    
-   <iframe id="driver" src="https://script.google.com/macros/s/AKfycbyiWV1YeZowV4woAyZ4yIqalSpfDDA14dOkRaSRrSXaUkSIqBjr4vzXtllMWbLWYI2e/exec" frameborder="0" width="100%" height="1280px" style="display:none;" ></iframe> 
+        
+    </head>
+    <body>  
+        <div style="margin-top: 0px; float: right; ">
+            <br>
+            <button id="option" onclick="Open()" style="background-color: azure; width:250px; margin-right: 10px;" ><b> Service</b></button>
+
+            <button id="fermer" onclick="Close()" style="background-color: azure; width:250px; margin-right: 10px; display:none;"><b> Fermer</b></button>
+            
+
+            <div id="navigue"   style="display:none; background-color: azure; width:250px; margin-right: 10px;">
+               
+                
+               <hr>
+               <p > <a href="https://script.google.com/macros/s/AKfycbza6XiCGOVsI3uquzcxxDkANg1CAck-vNy8fmOaVsh_ugvgPvIYoLAsLxYgGzMV2VYT/exec"> <b>Rechercher une Naissance</b> </a></p>
+               <hr>
+
+            <script>
+                 function Open(){
+    document.getElementById("navigue").style.display="block";
+    document.getElementById("fermer").style.display="block";
+    document.getElementById("option").style.display="none";
+  }
+
+
+  function Close(){
+
+   document.getElementById("option").style.display = "block";
+    document.getElementById("navigue").style.display = "none";
+    document.getElementById("fermer").style.display="none";  
+  }
+            </script>
+            </div>
+
+
+        </div>
+        <br><br><br>
+      <img src="https://ia801508.us.archive.org/19/items/bis-black-ground/logo%20bis.jpg" style="width: 250px; height: 120px; float: left;">
+      <br><br>
+        <center>
+       <br><br>
+        <div style="border-top: 5px solid #ff0000; ">
+            <h5 style="font-weight: bold; font-style: italic;">Enregistrer une Naissance </h5>
+        </div>
+        <br><br>
+    <div id="formio" style="width: 90%; background-color: #f0ffff;">
+        <script src="https://unpkg.com/formiojs@latest/dist/formio.embed.js?src=https://tzvjdoyzvjoonhk.form.io/bis"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    </div>
+
   
-    <script>
-      function change() {
-      document.getElementById("client").style.display= "none";
-      document.getElementById("driver").style.display= "block";
-      }
-    </script>
-   
-  </body>
+        </center>
+      </body>
 </html>
