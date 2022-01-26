@@ -6,7 +6,11 @@
    
         
     </head>
-    <body>  
+    <body>
+          
+
+        <div id="corps" style="display: none;">
+
         <div style="margin-top: 0px; float: right; ">
             <br>
             <button id="option" onclick="Open()" style="background-color: azure; width:250px; margin-right: 10px;" ><b> Service</b></button>
@@ -56,6 +60,39 @@
     
 
   
-        </center>
+        
+
+       </div>
+
+       <div id="user" style="margin-top: 50px;" >
+        <img src="https://ia801508.us.archive.org/19/items/bis-black-ground/logo%20bis.jpg" style="width: 250px; height: 120px; float: left;">
+        <center>
+        <h1 style="border-top: none; border-right: none; border-left: none; outline: none; text-align: center;font-size:30px ;width: 100%;font-weight:bold;font-style: italic;"><b>Seul les agents ayant obtenus leurs codes agent.<br>Peuvent acceder la base de données. </b><br>
+        Saisissez votre Code Agent. </h1>
+        </center><br><br><hr>
+           <input id="agent" placeholder="Code Agent" style="border-top: none; border-right: none; border-left: none; outline: none; text-align: center;font-size:30px ;width: 100%;font-weight:bold;font-style: italic;"/> <br>
+           <br><br>
+           <br><br><span id="errorMessage" style="color: red; margin-left: 10px;" ></span><br>
+           <input type="submit" value="Se Connecter" onclick="Connect()"   style="float:right; margin-right: 80px; background-color:blue; color:white; font-weight: bold; border-radius:8px; height:50px; width: 120px;" />
+           
+       </div>
+
+       <script>
+           function Connect(){
+            var agent = document.getElementById("agent").value;
+             if (agent=="ZA000GA01" || agent=="ZA000GA02"){
+                 document.getElementById("user").style.display="none";
+                 document.getElementById("corps").style.display="block";
+
+             } else{
+                document.getElementById("errorMessage").innerHTML = "Agent Non Identifiable!";
+             
+             }
+
+           }
+       </script>
+
+
+      </center>
       </body>
 </html>
