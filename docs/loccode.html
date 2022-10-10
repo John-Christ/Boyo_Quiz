@@ -62,13 +62,12 @@ function geocodeLatLng(geocoder, map, infowindow) {
 html,
 body {
   height: 100%;
-  margin: 0;
-  padding: 0;
+
 }
 
 #floating-panel {
   position: absolute;
-  top: 10px;
+ 
   left: 25%;
   z-index: 5;
   background-color: #fff;
@@ -80,7 +79,7 @@ body {
   padding-left: 10px;
 }
 
-#floating-panel {
+/**#floating-panel {
   position: absolute;
   top: 5px;
   left: 50%;
@@ -91,7 +90,8 @@ body {
   padding: 5px;
   border: 1px solid #999;
 }
-
+**/
+      
 #latlng {
   width: 225px;
 }
@@ -100,13 +100,13 @@ body {
   </head>
   <body>
 
-    <button onclick="getLocation()">Find Your Location</button>
-    <br> <br>
-    <h5 >click the button above.Then copy and paste your location details generated<br>
-    into the input next to get the address.</h5><br>
-
+   
+ 
 <output style="margin-left: 10px; display: block; background-color:lightyellow;"  id="demo"></output><br><br>
 
+    
+     <button onclick="getLocation()">Find Your Location</button>
+    <br> <br>
 <script>
 var x = document.getElementById("demo");
 
