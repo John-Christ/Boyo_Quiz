@@ -10,7 +10,36 @@
   </head>
   <body onload="myFunction()">
    
-   <!-- <p id="wait" style="top:10px;" onclick="change()" > <b > Please wait...</b></p> -->
+    <div onclick="change()"  id="wait" style="float:center; top:10px;" >
+    <p style="font-style: italic" > <b> Please wait...</b></p> 
+    <img src="https://ia601504.us.archive.org/9/items/voug_20210930/Copy%20of%20VOUG.png" style="float:center;" id="attdriver" > 
+    </div>
+    
+    <style>
+    
+    #attdriver  {
+  border: 8px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 8px solid #3498db;
+  width: 20px;
+  height: 20px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+    
+    </style>
     
      <script>
     function myFunction() {
