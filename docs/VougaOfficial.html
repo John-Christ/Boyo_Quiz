@@ -90,12 +90,15 @@ function showPage() {
       function change() {
       document.getElementById("client").style.display= "none";
       document.getElementById("driver").style.display= "block";
+        
+        var element = document.getElementById("driver");
+             element.scrollIntoView(true);
       }
     </script>
    
     
      <div  id="wait" style=" display:inline-block; weight:100%" onclick="change()" >
-    <p style="float: left;  font-size:10px ; font-weight:bold; font-style: italic; color:steelblue;" > <b> Partners Platform, Powered by Boyo Lifestyle (pty) Ltd</p>
+    <p style="float: left;  font-size:10px ; font-weight:bold; font-style: italic; color:steelblue;" > <b> Partners Platform, Powered by Boyo Lifestyle (pty) Ltd.</p>
     
      
     </div>
