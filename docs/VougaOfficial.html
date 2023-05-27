@@ -44,6 +44,8 @@
      <script>
     function myFunction() {
   myVar = setTimeout(showPage, 3000);
+  var x = document.getElementById("myAudio"); 
+   x.play(); 
 }
 
 function showPage() {
@@ -56,9 +58,9 @@ function showPage() {
     </script> 
     
     
-    <audio id="myAudio" style="display:none;" controls autoplay>
-  <source src="docs_vouga welcome Edit 1 Export 1.mp3" type="audio/ogg">
-  <source src="docs_vouga welcome Edit 1 Export 1.mp3" type="audio/mpeg">
+    <audio id="myAudio">
+  <source src="welcome.mp3" type="audio/ogg">
+  <source src="welcome.mp3" type="audio/mpeg">
 </audio>
     
     
