@@ -11,6 +11,6 @@
   "theme_color": "#ffffff",
   "categories": [],
   "screenshots": [],
-  "icons": "boylogo.png",
+  "icons": [VOUG1.png],
   "shortcuts": []
 }
