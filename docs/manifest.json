@@ -11,6 +11,18 @@
   "theme_color": "#ffffff",
   "categories": [],
   "screenshots": [],
-  "icons": "VOUG1.png",
-  "shortcuts": []
+  "icons": [
+    {
+      "src": "VOUG1.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+    ],
+  "shortcuts": [];
+   "related_applications": [
+    {
+      "platform": "play",
+      "url": "https://play.google.com/store/apps/details?id=com.ex.vouga"
+    }
+  ]
 }
