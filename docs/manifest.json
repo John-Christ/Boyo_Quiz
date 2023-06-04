@@ -1,0 +1,16 @@
+{
+  "background_color": "#ffffff",
+  "description": "Digital taxi app",
+  "dir": "ltr",
+  "display": "standalone",
+  "name": "vouga",
+  "orientation": "any",
+  "scope": "/",
+  "short_name": "vouga",
+  "start_url": "/",
+  "theme_color": "#ffffff",
+  "categories": [],
+  "screenshots": [],
+  "icons": [],
+  "shortcuts": []
+}
