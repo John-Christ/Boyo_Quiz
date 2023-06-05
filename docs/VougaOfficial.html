@@ -17,6 +17,33 @@
       <img src="https://ia601504.us.archive.org/9/items/voug_20210930/Copy%20of%20VOUG.png" style="float:right;" id="attdriver" >
     </div>
     
+    
+
+<button onclick="getLocation()">Try It</button>
+
+<p id="demo"></p>
+
+<script>
+var x = document.getElementById("demo");
+
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else { 
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition(position) {
+  x.innerHTML = "Latitude: " + position.coords.latitude + 
+  "<br>Longitude: " + position.coords.longitude;
+}
+</script>
+    
+    
+    
+    
+    
     <style>
     
     #attdriver  {
