@@ -1,397 +1,141 @@
 <!DOCTYPE html>
-<html lang= "fr-FR">
-    <head>
-
-              <!--$wcmPlaceholder("Home Page")--> 
-        <link rel="canonical" href="http://boyoquiz.com/">
-
-        <meta content="text/html"; charset = utf-8" http-equiv = "Content-Type">
-        <meta name="author" content="John Christ Bouma"> 
-        <link rel= "icon" href="https://ia601404.us.archive.org/1/items/whats-app-image-2021-02-27-at-13.08.16/WhatsApp%20Image%202021-02-27%20at%2013.08.16.jpeg" size="192x192">
-        <title>BOYO QUIZ</title>
-
-
- 
-                                                                                                                                 
-        <!-- Global site tag (gtag.js) - Google Ads: 723984619 -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-723984619"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-
-gtag('config', 'AW-723984619');
-</script>
-                                                                                                                      
-<!-- Event snippet for Website traffic conversion page -->
-<script>
-gtag('event', 'conversion', {'send_to': 'AW-723984619/lq4CCNDo6_kBEOvBnNkC'});
-</script>
-                                                                                                                          
- 
-                                                                                                                            
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-RBDN0MJBJE"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-
-gtag('config', 'G-RBDN0MJBJE');
-</script>   
-                                                                            
-                                                                            
-    <script>
-            function myFunction() {
-              location.replace("https://boyoquiz.com")
-            }
-            </script>                                                                        
-
-
-    <style>
-        ul {
-  list-style-type: none;
-  
-  margin: 0;
-  padding: 15px;
-  overflow: hidden;
-  background-color:greenyellow;
-  height: 100px;                                                                          
-  
- }
-
- li {
-  float: left;
-                                                                           
-  
- }
-
- li a {
-  display: block;
-  color :blue;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
- }
-
- li a:hover {
-  background-color: yellow;
-
- }
-
- #logo{
-    float: right;
-    width: 40px;
-    height: 40px;
-    margin-right:40%;
-    border:solid 5px gold;
-    border-radius: 20px;
+<html>
+  <head>
+    <title>Vouga</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="Vouga" content="WebApp"> 
     
- }
-                                                                            
-  #img {
-     display: block;
-     width: 350px;
-   border-radius: 155px;
-  border-top: solid 4px gold;
-  border-bottom: solid 4px gold;
-  background-color: white;
- }  
-                                                                            
-#img1 {
-   display: block;
-     background-color: gold;
-     color: blue;
-     text-shadow:mediumspringgreen;
-     border-radius: 25px;
-     padding: 15px;
-     font: italic small-caps bold  Georgia, serif; 
-     width: 45px;                                                                  
-   }
-                                                                            
- #bloc {
-   display: block;
-   width: 850px;                                                                        
-   border-radius: 35px;
-  border-top: solid 4px gold;
-  border-bottom: solid 4px gold;
-  background-color:lightcyan;
- }
-
- #bloc1 {
-   display:block;
-   width: 700px;
-   height: 300px;
-   border-bottom: solid 5px gold;
-   border-radius: 35px;
-   overflow: auto;
-   background-color: white;
-                                                                         
- }
-
- #bloc2 {
-   display: block;
-   width: 700px;
-   height: 300px;
-   border-radius: 35px;
-   background-color: white;
-                                                                         
- }
-
-
+    
    
+    
+   
+  </head>
+  <body onload="myFunction()">
+   
+    <div onclick="change()"  id="wait" style=" display:inline-block;" > 
+    <p style="font-style: italic; float:right;" > <b>Please, wait...</b></p> 
+      <img src="https://ia601504.us.archive.org/9/items/voug_20210930/Copy%20of%20VOUG.png" style="float:right;" id="attdriver" >
+    </div>
+    
+    
 
- #z { 
-  display:block;
-   float: right;
-  border-radius: 50px;
-  width:200px;
-  height: 200px;
-  margin-top: 50px;
-  margin-right: 20px;
- }
+<button onclick="getLocation()">Try It</button>
 
+<p id="demo"></p>
 
+<script>
+var x = document.getElementById("demo");
 
- #footer {
-
-  background-color: greenyellow;
-  padding: 20px;
-  overflow: hidden;
-  
-  padding-bottom: 0;
-  height: 100px;                                                                          
- }
-
-#f {
-  float:left;
-  border-radius: 50px;
-  width:200px;
-  height: 200px;
-  margin-right: 20px;
-
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else { 
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
 }
-                                                                            
-                                                                                
- #biz {
-        display: block;
-        background-color: rgba(0,0,0,0.5);
-        color: white;
-        width: 100%;  
-        height: 50px;                                             
-       }
-                                                                 
-       #s6 {
-           color: orange;                                          
-          }                                                                  
+
+function showPosition(position) {
+  x.innerHTML = "Latitude: " + position.coords.latitude + 
+  "<br>Longitude: " + position.coords.longitude;
+}
+</script>
+    
+    
+    
+    
+    
+    <style>
+    
+    #attdriver  {
+  border: 3px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 3px solid #3498db;
+  width: 20px;
+  height: 20px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+    
     </style>
-    </head>
+    
+     <script>
+    function myFunction() {
+      
+   setTimeout(showPage, 3000);
+       
+}
 
-    <body>
-        <ul>
-            <li><a href="index.html">Page d'Accueil </a></li>
-            <li><a href="about.html">A Propos</a></li>
-            <li><a href="music.html">Music</a></li>
-                        
+function showPage() {
+  document.getElementById("wait").style.display = "none";
+  
+}
 
-            <img id=logo src="https://ia601404.us.archive.org/1/items/whats-app-image-2021-02-27-at-13.08.16/WhatsApp%20Image%202021-02-27%20at%2013.08.16.jpeg">              
-          </ul>
-          <center>
-            <br>
-            <p id=biz><br> Access our business platform. <a id=s6 href="BoyoLifestyle-Business.html">Click here</a></p>
-            
-             <br>
-              <div id=img>
-              <br>
-                <a href="https://boyoquiz.com/about.html"> <h1 id=img1> BoyoQuiz </h1>
-                </a>
-                <br>
-              </div>
-              <br>
-              <h5> Actualité et musique sont nos sujets.<br>
-              Navigue et découvre des nouvelles choses.<br>
-              Nous sommes heureux de vous avoir comme utilisateurs🎁✨😀</h5>
-                                                         
-                            
-                                                         
-              <br>
-              <br>
-                                                                                      
-                                                   
-             
- <div id=bloc>
-               
-               
-               <br>        
-    <div id=bloc1>
-    <a href=nc.html>
-    <img id=z src=nc1.jpeg>
-      <h1>Sport</h1>
-    <h3>Une journée sombre pour...</h3>
-    </a>
-               
-               
-          <br>        
-    <div id=bloc1>
-    <a href=joe1.html>
-    <img id=z src=joe2.png>
-      <h1>Joe Biden et la Chine</h1>
-    <h3>Joe Biden s'engage à souder<br>
-      les relations avec la Chine</h3>
-    </a>
-    </div>         
-             
-        <br>        
-    <div id=bloc1>
-    <a href=st.html>
-    <img id=z src=st3.png>
-      <h1>Afrique du Sud</h1>
-    <h3>La police tire sur les étudiants<br>
-       durant les protestations</h3>
-    </a>
-    </div> 
+       
+       
+    </script> 
     
     
-    </div id=bloc> 
-    <div id=bloc>  
-        
-        
-       <br>        
-    <div id=bloc1>
-    <a href=joe.html>
-    <img id=z src=joe.png>
-    <h1>Joe Biden</h1>
-   <h3>Joe Biden signe un chèque<br>
-        de 1,1 trillion pour le peuple </h3>
-    </a>
-    </div>  
-       <br>        
-               
-           <div id=bloc1>
-    <a href=pr.html>
-    <img id=z src=pr1.png>
-    <h1>Le prince Harry et Meghan</h1>
-   <h3> l'actrice Meghan <br>
-    n'est pas a sa place<h3>
-    </a>
-    </div>         
-               
-         <br>      
-               
-             <div id=bloc1>
-    <a href=bob1.html>
-    <img id=z src=bob.png>
-    <h1> Bobi Wine President.</h1>
-   <h3> Les élections passés, le jeune homme était ...<h3>
-    </a>
-    </div> 
-    
-    
-    </div id=bloc>
-    <div id=bloc>
-    
-
-
-<br>
-  <div id=bloc1>
-    <a href=news1.html>
-    <img id=z src=sen1.png>
-    <h1> La tension est à son extreme au Senegal.</h1>
-   <h3>Le président sénégalais Macky Sall fait face ...<h3>
-    </a>
-    </div>
-
-
-         <br>
-          
-            <div id=bloc1>
-              <a href=his.html>
-          <img id=z src="z.gif">
-           <h1>Histoire</h1>
-           
-           <h5 >Teste tes connaissances<br>
-          en Histoire et recois les felicitations<br>
-        du vieux Nzengue.</h5>
-           </a>   
-            </div>
-<br>
-            <div id=bloc1>
-            <a href=geo.html>
-              <img id=z src="a.gif">
-           <h1>Geographie</h1>
-           
-           <h5 >Teste tes connaissances<br>
-          en Geographie et recois les felicitations<br>
-        du President.</h5>
-          </a>
-            </div>
-        
-            
-            </div id=bloc>
-            <div id=bloc>
-
-
-
- <br>
-           <div id=bloc1>
-           <a href=act.html>
-            <img id=z src="a.gif">
-           <h1>Actualite</h1>
-           
-           <h5 >Teste tes connaissances<br>
-          sur l'Actualite et recois les felicitations<br>
-        du President.</h5>
-          </a>
-           </div>
-
-
-  <br>         
-           <div id=bloc2>
-            <a href=foc.html>
-            <img id=z src="z.gif">
-           <h1>Focalisateur de chances</h1>
-           
-           <h5>D'apres un ancien savant chinois,<br> 
-              harmonisr l'esprit tous les matins<br>
-             avec peu d'elements du hasard<br> 
-            aide a praparer une journee de succes. </h5>
-            <p>essayez <b>!!!</b></p>
-            </a>
-          </div>
-
-
-
-
-
-  </div id=bloc>
-                     <br>
-           <h5>Contacter Nous!<h5>
-                                 <br>
-           <div id=form>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://unpkg.com/formiojs@latest/dist/formio.full.min.css">
-  <script src="https://unpkg.com/formiojs@latest/dist/formio.full.min.js"></script>
-  <div id="formio"></div>
-  <script type="text/javascript">
-    window.onload = function() {
-      Formio.createForm(document.getElementById('formio'), 'https://pnrbtwgqnhdhboq.form.io/quiz');
-    };
-  </script>
-  </div>                      
-          </center>
  
-  <br>
+    
+    
+    
+    <!--vesion v4_2_2 Client test instance  -->
+     <iframe id="client" src="https://script.google.com/macros/s/AKfycbwIlxTYgPXf2xYbwlmcvfRv8QxDAW8S8lDJtRJFtlE-Da2fLDHiAt2N1dSGnJOsx6IpGQ/exec" frameborder="0" width="100%" height="1280px" allow="geolocation 'self' https://boyoquiz.com"></iframe> 
 
-  <div id=footer>
-    <div id=f>                             
-    <a href=p.html>Politiques.</a><br> <br>  
-    <a  href=tc.html>Termes et Conditions.</a> <br><br>
-    <a href=about.html>A Propos.</a> <br> <br>                         
+    
+     <!--vesion v4_2_1 Client  -->
+     <!-- <iframe id="client" src="https://script.google.com/macros/s/AKfycbx521ri9oeJ7fVPkByHsvxs15LnoZkRVwp0d5oIbd9DtwQsSYYhGDn2CMeuUGGdBMkN/exec" frameborder="0" width="100%" height="1280px"  ></iframe> -->
+    
+    
+    <!--vesion v4_2_2_1 Client test instance  -->
+    <iframe id="driver" src="https://script.google.com/macros/s/AKfycbyt1AKgN_LY8Kjh-3XlvMsLND1JjZe7DEpAvtC6v06DvroI_Farzw48n0jM2u9V-Gsa/exec" frameborder="0" width="100%" height="1280px" style="display:none;" allow="geolocation 'self' https://boyoquiz.com" ></iframe>  
+    
+    
+    
+               <!-- Version V4_1 -->
+         <!--      <iframe id="client" src="https://script.google.com/macros/s/AKfycby1xFNGa-xzKL-jJFmXGSzDvsHBBeSt7rpLbScLdq6a8alr6-0I5TAIkuxPOPAdE0mw/exec" frameborder="0" width="100%" height="1280px" ></iframe> -->
+               
+                <!-- this is driver link -- >
+             <!-- <iframe id="driver" src="https://script.google.com/macros/s/AKfycbyiWV1YeZowV4woAyZ4yIqalSpfDDA14dOkRaSRrSXaUkSIqBjr4vzXtllMWbLWYI2e/exec" frameborder="0" width="100%" height="1280px" style="display:none;" ></iframe> -->
+    
+    
+                      <!-- real driver link 1 -->
+<!-- <iframe id="driver" src="https://script.google.com/macros/s/AKfycbyiWV1YeZowV4woAyZ4yIqalSpfDDA14dOkRaSRrSXaUkSIqBjr4vzXtllMWbLWYI2e/exec" frameborder="0" width="100%" height="1280px" style="display:none;" ></iframe> --> 
+  
+    
+             <!--vesion v4_2 Client -->
+    <!--  <iframe id="driver" src="https://script.google.com/macros/s/AKfycbwIIZ0GoPX_BJEYK-ORF4dKT6nCFhxYYWGmIZY_N7KO1DZrskgJeUXWupLdOTAIjqMC/exec" frameborder="0" width="100%" height="1280px" style="display:none;" ></iframe> -->
+
+        
+    <!--  <iframe id="driver" src="loccode.html" frameborder="0" width="100%" height="1280px" style="display:none;" ></iframe>  -->
+
+    <script>
+      function change() {
+      document.getElementById("client").style.display= "none";
+      document.getElementById("driver").style.display= "block";
+        
+        var element = document.getElementById("driver");
+             element.scrollIntoView(true);
+      }
+    </script>
+   
+    
+     <div style=" display:inline-block; weight:100%" onclick="change()" >
+    <p style="float: left;  font-size:10px ; font-weight:bold; font-style: italic; color:steelblue;" > <b> Partners Platform, Powered by Boyo Lifestyle (pty) Ltd.</p>
+    
+     
     </div>
-                                                             
-    <center>                         
-    <P> © Boyo- BoyoQuiz- Boyo Lifestyle 2021</P>
-    </center>                             
-  </div id=footer>
-    </body>
-</html> 
+  </body>
+</html>
