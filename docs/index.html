@@ -18,7 +18,7 @@
       <img src="https://ia601504.us.archive.org/9/items/voug_20210930/Copy%20of%20VOUG.png" style="float:right;" id="attdriver" >
       
       <audio id="myAudio"  autoplay>
-  <source src="https://boyoquiz.com/wel.mp3" type="audio/ogg">
+  <source src="https://boyoquiz.com/wel.mp3" type="audio/mpeg">
 </audio>
     </div>
     
@@ -59,7 +59,8 @@
     function myFunction() {
       
    setTimeout(showPage, 3000);
-       
+  var xx = document.getElementById("myAudio");
+    xx.load();   
 }
 
 function showPage() {
