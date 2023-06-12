@@ -17,12 +17,13 @@
     <p style="font-style: italic; float:right;" > <b>Please, wait...</b></p> 
       <img src="https://ia601504.us.archive.org/9/items/voug_20210930/Copy%20of%20VOUG.png" style="float:right;" id="attdriver" >
       
-      <audio id="myAudio" >
+      <audio id="myAudio" controls autplay>
   <source src="https://boyoquiz.com/wel.mp3" type="audio/ogg">
 </audio>
     </div>
     
-    
+  <button onclick="enableAutoplay()" type="button">Enable autoplay</button>
+  
 
 
     
@@ -58,9 +59,7 @@
      <script>
     function myFunction() {
       
-   setTimeout(showPage, 3000);
-  var x = document.getElementById("myAudio");
-  x.load();   
+   setTimeout(showPage, 3000);  
 }
 
 function showPage() {
@@ -68,7 +67,10 @@ function showPage() {
   
 }
 
-       
+ function enableAutoplay() { 
+  x.autoplay = true;
+  x.load();
+}      
        
     </script> 
     
