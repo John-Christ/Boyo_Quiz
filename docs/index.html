@@ -22,7 +22,6 @@
 </audio>
     </div>
     
-  <button onclick="enableAutoplay()" type="button">Enable autoplay</button>
   
 
 
@@ -59,6 +58,9 @@
      <script>
     function myFunction() {      
    setTimeout(showPage, 3000);  
+   var x = document.getElementById("myAudio");
+  x.autoplay = true;
+  x.load();
 }
 
        
@@ -67,11 +69,7 @@ function showPage() {
   
 }
 
- function enableAutoplay() { 
-  var x = document.getElementById("myAudio");
-  x.autoplay = true;
-  x.load();
-}      
+     
        
     </script> 
     
