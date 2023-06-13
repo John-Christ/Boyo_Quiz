@@ -56,17 +56,19 @@
     </style>
     
      <script>
-  var x = document.getElementById("myAudio");     
+      
        
     function myFunction() {      
    setTimeout(showPage, 3000);  
-  x.autoplay = true;
-  x.load();
+ 
 }
 
        
 function showPage() {
   document.getElementById("wait").style.display = "none";
+  var x = document.getElementById("myAudio"); 
+   x.autoplay = true;
+  x.load();
   
 }
 
