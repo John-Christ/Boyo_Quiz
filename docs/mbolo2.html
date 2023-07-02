@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    </head>
+    <body>
+          
+
+        <div id="corps" style="display: none;">
+
+        <div style="margin-top: 0px; float: right; ">
+            <br>
+            <button id="option" onclick="Open()" style="background-color: azure; width:250px; margin-right: 10px;"  type="button" class="btn btn-primary"><b> Service</b></button>
+
+            <button id="fermer" onclick="Close()" style="background-color: azure; width:250px; margin-right: 10px; display:none;" type="button" class="btn btn-danger"><b> Fermer</b></button>
+            
+
+            <div id="navigue"   style="display:none; background-color: azure; width:250px; margin-right: 10px;">
+               
+                
+               <hr>
+               <p > <a href="mbolo.html"> <b>Enregistrer une Naissance</b> </a></p>
+               <hr>
+
+                
+            <script>
+                 function Open(){
+    document.getElementById("navigue").style.display="block";
+    document.getElementById("fermer").style.display="block";
+    document.getElementById("option").style.display="none";
+  }
+
+
+  function Close(){
+
+   document.getElementById("option").style.display = "block";
+    document.getElementById("navigue").style.display = "none";
+    document.getElementById("fermer").style.display="none";  
+  }
+            </script>
+            </div>
+
+
+        </div>
+        <br><br><br>
+      <img src="https://ia801508.us.archive.org/19/items/bis-black-ground/logo%20bis.jpg" style="width: 185px; height: 90px; ">
+      <br><br>
+        <center>
+
+        <div style="border-bottom: 5px solid #ff0000; ">
+            <h5 style="font-weight: bold; font-style: italic;"> En navigant ce document, vous affirmez disposer de toutes les autorisations requises.
+                <br> L'utilisation de ce système est strictement contrôlée. </h5>
+        </div>
+        <br><br>
+    <div>
+        <script src="https://sheetdb.io/s/t/26p1rpa3ldkga.js"></script>
+    </div>
+    
+
+  
+        
+
+       </div>
+
+       <div id="user" style="margin-top: 10px;" >
+        <img src="https://ia801508.us.archive.org/19/items/bis-black-ground/logo%20bis.jpg" style="width: 250px; height: 120px; ">
+        <center>
+            <br><br>
+        <h1 style="border-top: none; border-right: none; border-left: none; outline: none; text-align: center;font-size:30px ;width: 100%;font-weight:bold;font-style: italic;"><b>Seul les agents ayant obtenus leurs codes agent.<br>Peuvent acceder la base de données. </b><br>
+        Saisissez votre Code Agent. </h1>
+        </center><br><br><hr>
+           <input id="agent" placeholder="Code Agent" style="border-top: none; border-right: none; border-left: none; outline: none; text-align: center;font-size:30px ;width: 100%;font-weight:bold;font-style: italic;"/> <br>
+           <br><br>
+           <br><br><span id="errorMessage" style="color: red; margin-left: 10px;" ></span><br><br>
+           
+          <div style="display:inline-block;">
+            <input type="submit" value="Se Connecter" onclick="Connect()" style="float: right; margin-right: 10px; background-color:blue; color:white; font-weight: bold; border-radius:8px; height:50px; width: 120px;" />
+           <button style="background-color: white; border-color: white; width: 100px;"></button>
+            <button  style="float: left; margin-left: 10px; background-color:#7fff00; color:white; font-weight: bold; border-radius:8px; height:50px; width: 100px;"> <a href="BIS.html"><b>Retour</b> </a></button>
+            
+            </div><br>
+           <br><br>
+       </div>
+
+
+
+
+      </center>
+        <br><br>
+      </body>
+</html>
